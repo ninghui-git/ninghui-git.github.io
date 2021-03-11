@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Canvas的基本使用 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-10-08T09:35:13.000Z" itemprop="datePublished">
+          2020-10-08
+      </time>
+    
+</span>
+                <h1>Canvas的基本使用</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="Canvas的基本使用"><a href="#Canvas的基本使用" class="headerlink" title="Canvas的基本使用"></a>Canvas的基本使用</h1><blockquote>
+<p>canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。<br>基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。<br><canvas> 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。</p>
+</blockquote>
+<h3 id="体验Canvas"><a href="#体验Canvas" class="headerlink" title="体验Canvas"></a>体验Canvas</h3><h4 id="什么是Canvas？"><a href="#什么是Canvas？" class="headerlink" title="什么是Canvas？"></a>什么是Canvas？</h4><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>画布是一个矩形区域，您可以控制其每一像素。<br>canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
+<h4 id="创建Canvas元素"><a href="#创建Canvas元素" class="headerlink" title="创建Canvas元素"></a>创建Canvas元素</h4><p>向 HTML5 页面添加 canvas 元素。<br>规定元素的 id、宽度和高度：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--1.准备画布--&gt;</span><br><span class="line">&lt;!--1.1 画布是白色的 而且默认300*150--&gt;</span><br><span class="line">&lt;!--1.2 设置画布的大小  width&#x3D;&quot;600&quot; height&#x3D;&quot;400&quot; --&gt;</span><br><span class="line">&lt;canvas width&#x3D;&quot;600&quot; height&#x3D;&quot;400&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;!--2.准备绘制工具--&gt;</span><br><span class="line">&lt;!--3.利用工具绘图--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：canvas的大小要在标签内定义，否则会出现意料之外的效果。</p>
+<h4 id="Canvas坐标系"><a href="#Canvas坐标系" class="headerlink" title="Canvas坐标系"></a>Canvas坐标系</h4><p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/location.jpg" alt="img"></p>
+<h4 id="通过JavaScript来绘制"><a href="#通过JavaScript来绘制" class="headerlink" title="通过JavaScript来绘制"></a>通过JavaScript来绘制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*获取元素*&#x2F;</span><br><span class="line">var myCanvas &#x3D; document.querySelector(&#39;#myCanvas&#39;);</span><br><span class="line">&#x2F;*获取上下文 绘制工具箱 *&#x2F;</span><br><span class="line">&#x2F;*目前canvas只支持2d*&#x2F;</span><br><span class="line">&#x2F;*若要达到3d效果，需要想象一个3d坐标系后，再投影到canvas上*&#x2F;</span><br><span class="line">&#x2F;*或者配合WebGL达到3d效果*&#x2F;</span><br><span class="line">var context &#x3D; myCanvas.getContext(&#39;2d&#39;);</span><br><span class="line">&#x2F;*设置绘图的起始位置*&#x2F;</span><br><span class="line">context.moveTo(100,100);</span><br><span class="line">&#x2F;*绘制路径*&#x2F;</span><br><span class="line">context.lineTo(200,200);</span><br><span class="line">&#x2F;*描边*&#x2F;</span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
+
+<h3 id="Canvas的基本使用-1"><a href="#Canvas的基本使用-1" class="headerlink" title="Canvas的基本使用"></a>Canvas的基本使用</h3><h4 id="图形绘制"><a href="#图形绘制" class="headerlink" title="图形绘制"></a>图形绘制</h4><p>1、开启新的路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.beginPath();</span><br></pre></td></tr></table></figure>
+
+<p>2、画路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctx.moveTo(100,100);  &#x2F;&#x2F;将画笔放置在100px 100px的位置</span><br><span class="line">ctx.lineTo(200,100);  &#x2F;&#x2F;从（100，100）向（200，100）画一条轨迹</span><br><span class="line">ctx.lineTo(200,200);  &#x2F;&#x2F;从（200，100）向（200，200）画一条轨迹</span><br></pre></td></tr></table></figure>
+
+<p>此时，是看不出线条的，因为此时仅仅是一条没有颜色的轨迹。</p>
+<p>3、给路径描边（上色）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ctx.strokeStyle &#x3D; &quot;red&quot;; &#x2F;&#x2F;设置画笔颜色</span><br><span class="line">ctx.stroke();  &#x2F;&#x2F;开始描边</span><br></pre></td></tr></table></figure>
+
+<p>4、闭合路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.closePath();  &#x2F;&#x2F;将路径的起点与终点连接</span><br></pre></td></tr></table></figure>
+
+<h4 id="填充规则-非零环绕"><a href="#填充规则-非零环绕" class="headerlink" title="填充规则(非零环绕)"></a>填充规则(非零环绕)</h4><p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/zero.jpg" alt="img"></p>
+<h4 id="设置样式"><a href="#设置样式" class="headerlink" title="设置样式"></a>设置样式</h4><h5 id="画笔的状态"><a href="#画笔的状态" class="headerlink" title="画笔的状态"></a>画笔的状态</h5><ul>
+<li><p>lineWidth 线宽，默认1</p>
+</li>
+<li><p>lineCap 线末端类型：(butt默认)、round、square</p>
+<p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/lineCap.png" alt="lineJoin"></p>
+</li>
+<li><p>lineJoin 相交线的拐点 miter(默认)、round、bevel</p>
+<p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/lineJoin.png" alt="lineJoin"></p>
+</li>
+<li><p>strokeStyle 线的颜色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.strokeStyle &#x3D; &quot;blue&quot;;</span><br></pre></td></tr></table></figure></li>
+<li><p>fillStyle 填充颜色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillStyle  &#x3D; &quot;blue&quot;;</span><br></pre></td></tr></table></figure></li>
+<li><p>setLineDash() 设置虚线</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.setLineDash([50,10]);</span><br></pre></td></tr></table></figure>
+
+<p>setLineDash方法规定虚线的特征，它的参数是一个具有两个元素的数组。</p>
+<p>第一个数组元素规定虚线尺寸，也就是我们可见的部分，比如上面的红色小线段。</p>
+<p>第二个数组元素规定虚线与虚线之间的间隔，通过线段与间隔交替出现，构成了一个完整的虚线。</p>
+</li>
+<li><p>getLineDash() 获取虚线宽度集合</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(ctx.getLineDash());</span><br></pre></td></tr></table></figure>
+
+<p>打印结果：<code>(2) [500, 10]</code></p>
+</li>
+<li><p>lineDashOffset 设置虚线偏移量（负值向右偏移）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*如果是正的值 往后偏移*&#x2F;</span><br><span class="line">&#x2F;*如果是负的值 往前偏移*&#x2F;</span><br><span class="line">&#x2F;*ctx.lineDashOffset &#x3D; 10;*&#x2F;</span><br><span class="line">ctx.lineDashOffset &#x3D; -10;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="线性颜色渐变填充"><a href="#线性颜色渐变填充" class="headerlink" title="线性颜色渐变填充"></a>线性颜色渐变填充</h5><ul>
+<li><p>利用循环绘制从黑道白道的渐变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ctx.lineWidth &#x3D; 30;</span><br><span class="line">for (var i &#x3D; 0; i &lt; 255; i++) &#123;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.moveTo(100+i-1,100);</span><br><span class="line">    ctx.lineTo(100+i,100);</span><br><span class="line">    ctx.strokeStyle &#x3D; &#39;rgb(&#39;+i+&#39;,&#39;+i+&#39;,&#39;+i+&#39;)&#39;;</span><br><span class="line">    ctx.stroke();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>createLinearGradient</p>
+<p>1、先利用createLinearGradient创建出一个颜色渐变的样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*1、确定渐变方向*&#x2F;</span><br><span class="line">&#x2F;*渐变起点x  起点y   终点x  终点y*&#x2F;</span><br><span class="line">&#x2F;*由（100px,100px）渐变至（500,400px）*&#x2F;</span><br><span class="line">var linearGradient &#x3D; ctx.createLinearGradient(100,100,500,400);</span><br><span class="line"></span><br><span class="line">&#x2F;*调节起始与终止点的位置  使之在水平对齐  渐变效果为由上而下渐变*&#x2F;</span><br><span class="line">&#x2F;&#x2F; var linearGradient &#x3D; ctx.createLinearGradient(100,150,200,150);</span><br><span class="line"></span><br><span class="line">&#x2F;*调节起始与终止点的位置  使之在垂直对齐  渐变效果为由左而右渐变*&#x2F;</span><br><span class="line">&#x2F;&#x2F; var linearGradient &#x3D; ctx.createLinearGradient(250,100,250,200);</span><br><span class="line"></span><br><span class="line">&#x2F;*2、确定渐变颜色*&#x2F;</span><br><span class="line">&#x2F;*位置（取值为0~1）   颜色*&#x2F;</span><br><span class="line">linearGradient.addColorStop(0,&#39;pink&#39;);</span><br><span class="line">linearGradient.addColorStop(0.5,&#39;red&#39;);</span><br><span class="line">linearGradient.addColorStop(1,&#39;blue&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>2、给画笔上渐变色！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillStyle &#x3D; linearGradient;</span><br></pre></td></tr></table></figure>
+
+<p>3、填充</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ctx.rect(0,0,200,100);</span><br><span class="line">ctx.fill();  &#x2F;&#x2F;对stroke()失效</span><br></pre></td></tr></table></figure>
+
+<h5 id="径向颜色渐变填充"><a href="#径向颜色渐变填充" class="headerlink" title="径向颜色渐变填充"></a>径向颜色渐变填充</h5><ul>
+<li><p>createRadialGradient(x0,y0,r0,x1,y1,r1,x2,y2,r2……)</p>
+<p>x0,y0,r0 第一个圆 圆心的x，圆心的y，圆心的半径</p>
+<p>。。。以此类推</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&quot;myCanvas&quot;);</span><br><span class="line">var ctx &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">&#x2F;&#x2F;绘制一个以坐标点(100,100)为圆心、半径为50px的圆形</span><br><span class="line">ctx.arc(100, 100, 50, 0, Math.PI * 2, false);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;创建一个表示放射性颜色渐变的CanvasGradient对象</span><br><span class="line">&#x2F;&#x2F;该对象的作用域是以(100,100)为圆心、半径为10px的内圆和以(100,100)为圆心、半径为50px的外圆之间的环状区域</span><br><span class="line">var canvasGradient &#x3D; ctx.createRadialGradient(100, 100, 10, 80, 100, 80);</span><br><span class="line">&#x2F;&#x2F;在offset为0的位置(即内圆的圆圈处)添加一个蓝色的渐变</span><br><span class="line">canvasGradient.addColorStop(0, &quot;blue&quot;);</span><br><span class="line">&#x2F;&#x2F;在offset为0.5的位置(环状区域从内到外放射50%的中间位置)添加一个绿色的渐变</span><br><span class="line">canvasGradient.addColorStop(0.5, &quot;pink&quot;);</span><br><span class="line">&#x2F;&#x2F;在offset为0的位置(即外圆的圆圈处)添加一个红色的渐变</span><br><span class="line">canvasGradient.addColorStop(1, &quot;orange&quot;);</span><br><span class="line">&#x2F;&#x2F;将fillStyle的属性值设为该CanvasGradient对象</span><br><span class="line">ctx.fillStyle &#x3D; canvasGradient;</span><br><span class="line">ctx.fill();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="Canvas图形绘制"><a href="#Canvas图形绘制" class="headerlink" title="Canvas图形绘制"></a>Canvas图形绘制</h3><h4 id="矩形绘制"><a href="#矩形绘制" class="headerlink" title="矩形绘制"></a>矩形绘制</h4><ul>
+<li><p>rect(x,y,w,h) 只创造出矩形而不绘制（stroke fill），也不结束绘画</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.rect(100,100,200,100); &#x2F;&#x2F;左上角x轴坐标  左上角y轴坐标 宽 高</span><br></pre></td></tr></table></figure></li>
+<li><p>strokeRect(x,y,w,h) 有独立路径，会自动绘制（stroke），自动结束绘画，不影响下次绘画。</p>
+</li>
+<li><p>fillRect(x,y,w,h) 有独立路径，不影响别的绘制</p>
+</li>
+<li><p>clearRect(x,y,w,h) 擦除矩形区域</p>
+<h4 id="圆弧绘制"><a href="#圆弧绘制" class="headerlink" title="圆弧绘制"></a>圆弧绘制</h4><p>arc(x,y,r,startAngle,endAngle,anticlockwise)</p>
+<ul>
+<li>x 圆心横坐标</li>
+<li>y 圆心纵坐标</li>
+<li>r 半径</li>
+<li>startAngle 开始角度</li>
+<li>endAngle 结束角度</li>
+<li>anticlockwise 是否逆时针方向绘制（默认false表示顺时针；true表示逆时针）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.arc(200,200,150,0,Math.PI&#x2F;3,false);  &#x2F;&#x2F;默认 顺时针</span><br><span class="line">&#x2F;&#x2F; context.arc(w&#x2F;2,h&#x2F;2,150,0,Math.PI&#x2F;3,true);  &#x2F;&#x2F;逆时针</span><br></pre></td></tr></table></figure>
+
+<h4 id="扇形的绘制"><a href="#扇形的绘制" class="headerlink" title="扇形的绘制"></a>扇形的绘制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ctx.moveTo(200,200);</span><br><span class="line">&#x2F;&#x2F; arc是紧接着上一次笔触的地方开始画</span><br><span class="line">&#x2F;&#x2F; ctx.beginPath();  &#x2F;&#x2F;当重新开始路劲时效果会发生变化</span><br><span class="line">ctx.arc(200,200,100,0,Math.PI&#x2F;3,true);  &#x2F;&#x2F;这里暗含着 lineTo(300,200);</span><br><span class="line">ctx.closePath();</span><br><span class="line">ctx.stroke();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h4><ul>
+<li>ctx.font = ‘微软雅黑’ 设置字体</li>
+<li>strokeText()</li>
+<li>fillText(text,x,y,maxWidth)<ul>
+<li>text 要绘制的文本</li>
+<li>x,y 文本绘制的坐标（文本左下角）</li>
+<li>maxWidth 设置文本最大宽度，可选参数</li>
+</ul>
+</li>
+</ul>
+<p> ctx.textAlign文本水平对齐方式，相对绘制坐标来说的</p>
+<ul>
+<li>left</li>
+<li>center</li>
+<li>right</li>
+<li>start 默认</li>
+<li>end</li>
+</ul>
+<p>ctx.direction属性css(rtl ltr) start和end于此相关</p>
+<ul>
+<li>如果是ltr,start和left表现一致</li>
+<li>如果是rtl,start和right表现一致</li>
+</ul>
+<p>ctx.textBaseline 设置基线（垂直对齐方式 ）</p>
+<ul>
+<li>top 文本的基线处于文本的正上方，并且有一段距离</li>
+<li>middle 文本的基线处于文本的正中间</li>
+<li>bottom 文本的基线处于文本的证下方，并且有一段距离</li>
+<li>hanging 文本的基线处于文本的正上方，并且和文本粘合</li>
+<li>alphabetic 默认值，基线处于文本的下方，并且穿过文字</li>
+<li>ideographic 和bottom相似，但是不一样</li>
+<li>measureText() 获取文本宽度obj.width</li>
+</ul>
+<h3 id="贝塞尔曲线"><a href="#贝塞尔曲线" class="headerlink" title="贝塞尔曲线"></a>贝塞尔曲线</h3><h4 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h4><p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/01base.gif" alt="01base"></p>
+<p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/02base.gif" alt="02base"></p>
+<p>一个点确定曲线（一次）</p>
+<p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/bezier02.gif" alt="bezier02"></p>
+<p>两个点确定曲线（二次）</p>
+<p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/bezier03.gif" alt="bezier03"></p>
+<p>三个点确定曲线（三次）</p>
+<p><img src="https://howlcn1997.github.io/2019/08/19/canvas%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/bezier04.gif" alt="bezier04"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id&#x3D;&quot;canvas&quot; width&#x3D;&quot;500px&quot; height&#x3D;&quot;500px&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&#x2F;&#x2F;1.拿到画布</span><br><span class="line">var canvas &#x3D; document.getElementById(&quot;canvas&quot;);</span><br><span class="line">&#x2F;&#x2F;2.拿到画布的上下文</span><br><span class="line">var context &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;3.一次贝塞尔曲线</span><br><span class="line">context.beginPath();</span><br><span class="line">context.moveTo(300,100);</span><br><span class="line">context.quadraticCurveTo(100, 100, 300, 300);</span><br><span class="line">context.stroke();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;4.二次贝塞尔曲线</span><br><span class="line">context.beginPath();</span><br><span class="line">context.moveTo(300,100);</span><br><span class="line">context.bezierCurveTo(100, 100, 300, 300,200,400);</span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
+
+<h3 id="做动画"><a href="#做动画" class="headerlink" title="做动画"></a>做动画</h3><h4 id="绘制图片"><a href="#绘制图片" class="headerlink" title="绘制图片"></a>绘制图片</h4><h5 id="创建图片对象"><a href="#创建图片对象" class="headerlink" title="创建图片对象"></a>创建图片对象</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var img &#x3D; new Image();</span><br><span class="line">img.src &#x3D; &quot;.&#x2F;image&#x2F;img1.jpg&quot;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;图片加载完毕 触发事件</span><br><span class="line">img.onload() &#x3D; function()&#123;</span><br><span class="line">	&#x2F;&#x2F;ctx.drawImage();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><p>drawImage()<br>     三个参数drawImage(img,x,y)<br>        img 图片对象、canvas对象、video对象<br>        x,y 图片绘制的左上角<br>    五个参数drawImage(img,x,y,w,h)<br>        img 图片对象、canvas对象、video对象<br>        x,y 图片绘制的左上角<br>        w,h 图片绘制尺寸设置(图片缩放，不是截取)<br>    九个参数drawImage(img,x,y,w,h,x1,y1,w1,h1)<br>        img 图片对象、canvas对象、video对象<br>        x,y,w,h 图片中的一个矩形区域（从图片上截取一部分）<br>        x1,y1,w1,h1 画布中的一个矩形区域</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/11/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="float: left;">
+        ← 正则表达式
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/09/14/Javascript-%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/">
+        Javascript 日常记录 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

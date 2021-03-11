@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>简述Js中的原型与原型链 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-07-15T09:29:29.000Z" itemprop="datePublished">
+          2020-07-15
+      </time>
+    
+</span>
+                <h1>简述Js中的原型与原型链</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="1、原型"><a href="#1、原型" class="headerlink" title="1、原型"></a>1、原型</h2><p> Javascript是基于对象的编程语言，他其中也含有部分封装、继承的概念，而原型概念便是基于继承的。</p>
+<p> 函数的原型类似于面向对象语言中子类的父类，而函数本身类似于子类。函数继承了函数原型中的属性和方法，即函数本身可以调用它原型中的属性和方法。</p>
+<p> 知识点：若有函数Person，则它的函数原型为Person.prototype，函数原型本身是个对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function Person (name) &#123;</span><br><span class="line">  this.name &#x3D; name;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.type &#x3D; &#39;human&#39;</span><br><span class="line">Person.prototype.sayName &#x3D; function () &#123;</span><br><span class="line">  console.log(this.name + &#39;说话了&#39;)</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;此时我们用Person构造函数构造了一个p对象</span><br><span class="line">var p &#x3D; new Person(&#39;小王&#39;);</span><br><span class="line">&#x2F;&#x2F;我们打印p.name</span><br><span class="line">console.log(p.name); &#x2F;&#x2F;结果是&#39;小王&#39;，因为Preson函数中已经预置了name属性并且接受了new对象时传入的&#39;小王&#39;，结果勿容置疑</span><br><span class="line">&#x2F;&#x2F;我们再打印p.type 调用p.sayName()  按常理说Preson构造函数中是不存在type属性和sayName方法，若调用应该会报错</span><br><span class="line">console.log(p.type); &#x2F;&#x2F;结果  human</span><br><span class="line">p.sayName(); &#x2F;&#x2F; 结果  小王说话了</span><br><span class="line">&#x2F;&#x2F;结果和我们预想的不同，这是为什么呢?</span><br><span class="line">&#x2F;&#x2F;因为Person继承了它原型Person.prototype中的信息，当调用p.type时，会优先在Person类中找该属性，若找到了则直接使用，若没找到则在他的原型中找并使用。因为我们设置了Person原型的type属性的，则p可以直接使用</span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中涉及到了 构造函数、对象和函数原型，接下来给出三者之间的关系图；</p>
+<h2 id="2、构造函数、实例、原型三者之间的关系"><a href="#2、构造函数、实例、原型三者之间的关系" class="headerlink" title="2、构造函数、实例、原型三者之间的关系"></a>2、构造函数、实例、原型三者之间的关系</h2><p><img src="https://howlcn1997.github.io/2020/01/17/%E7%AE%80%E8%BF%B0Js%E4%B8%AD%E7%9A%84%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/%E4%B8%89%E8%80%85%E5%85%B3%E7%B3%BB.png" alt="三者关系"></p>
+<p>由图中我们可以很直观的看到三者之间的关系。</p>
+<p>p对象由Person构造函数构造</p>
+<p>p对象通过__proto__属性访问到Person对象原型</p>
+<p>Person对象原型通过constructor访问Person构造函数</p>
+<p>Person函数通过prototype属性访问到Person原型对象</p>
+<p>注意：对象是通过__proto__属性访问对象原型，函数是通过prototype访问对象原型，但两者访问到的对象原型是同一个</p>
+<p>验证：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(p.__proto__ &#x3D;&#x3D; Person.prototype); &#x2F;&#x2F;结果为 true</span><br></pre></td></tr></table></figure>
+
+<p>constructor的作用：可以使得对象访问到对应的构造函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function Person()&#123;</span><br><span class="line">&#125;</span><br><span class="line">var p &#x3D; new Person();</span><br><span class="line">console.log(p.constructor);&#x2F;&#x2F; 打印  function Person()</span><br></pre></td></tr></table></figure>
+
+<p>知道以上的知识之后，我们还要了解，其实Person的原型也有原型，即存在Person.prototype.prototype，并且它是Person.prototype的原型，可以用图来直观了解这其中的关系，这便是一个简单的原型链。</p>
+<h2 id="3、原型链"><a href="#3、原型链" class="headerlink" title="3、原型链"></a>3、原型链</h2><p><img src="https://howlcn1997.github.io/2020/01/17/%E7%AE%80%E8%BF%B0Js%E4%B8%AD%E7%9A%84%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E9%93%BE.png" alt="原型链"></p>
+<h2 id="4、原型链中的搜索规则"><a href="#4、原型链中的搜索规则" class="headerlink" title="4、原型链中的搜索规则"></a>4、原型链中的搜索规则</h2><p>了解了 <strong>构造函数-实例-原型对象</strong> 三者之间的关系后，接下来我们来解释一下为什么实例对象可以访问原型对象中的成员。</p>
+<p>每当代码读取某个对象的某个属性时，都会执行一次搜索，目标是具有给定名字的属性</p>
+<ul>
+<li>搜索首先从对象实例本身开始</li>
+<li>如果在实例中找到了具有给定名字的属性，则返回该属性的值</li>
+<li>如果没有找到，则继续搜索指针指向的原型对象，在原型对象中查找具有给定名字的属性</li>
+<li>如果在原型对象中找到了这个属性，则返回该属性的值</li>
+</ul>
+<p>也就是说，在我们调用 <code>p.sayName()</code> 的时候，会先后执行两次搜索：</p>
+<ul>
+<li>首先，解析器会问：“实例 p 有 sayName 属性吗？”答：“没有。</li>
+<li>”然后，它继续搜索，再问：“ p 的原型有 sayName 属性吗？”答：“有。</li>
+<li>”于是，它就读取那个保存在原型对象中的函数。</li>
+</ul>
+<p>而这正是多个对象实例共享原型所保存的属性和方法的基本原理。</p>
+<p>总结：</p>
+<ul>
+<li>先在自己身上找，找到即返回</li>
+<li>自己身上找不到，则沿着原型链向上查找，找到即返回</li>
+<li>如果一直到原型链的末端还没有找到，则返回 <code>undefined</code></li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/08/05/Git/" style="float: left;">
+        ← Git
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/07/02/Hello%20React/">
+        Hello React →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

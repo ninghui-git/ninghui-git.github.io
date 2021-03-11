@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
+    </div>
+</section>
+
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
+
+<section id="intro">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2021/03/10/第一篇博客/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2021-03-10T14:42:05.680Z" itemprop="datePublished">
+          2021-03-10
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        123title: 我的第一篇博客date: 2020-06-08 17:17:58tags:
+
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2021/03/10/第一篇博客/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2021/03/10/hello-world/">Hello World</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2021-03-10T14:21:35.062Z" itemprop="datePublished">
+          2021-03-10
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new p
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2021/03/10/hello-world/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/12/08/React-的7中怪异代码/">React 的7中怪异代码</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-12-08T09:53:56.000Z" itemprop="datePublished">
+          2020-12-08
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         阅读本文可能花费您 9 分钟
+教你如何更好地写 React。
+前言原文链接：7 code smells in your React components
+作者信息：Anton Gunnarsson
+翻译许可：
+正文自从使用 React 后，我见过越来越多可值得优化的点，比如：
+
+大量的 props
+props 的不兼容性
+props 复制为 state
+返回 JSX 的函数
+state 的多个状态
+useState 过多
+复杂的 us
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/12/08/React-的7中怪异代码/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/12/07/MongoDB/">MongoDB</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-12-07T09:47:18.000Z" itemprop="datePublished">
+          2020-12-07
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        MongoDB123456789101112131415161718&#x2F;&#x2F;缓存---&gt;文件---&gt;关系型数据库&#x2F;&#x2F;1.数据保存到内存：优点：1）读写非常快缺点：1）程序关闭导致数据丢失&#x2F;&#x2F;2.数据保存到文件：优点：1）数据可以永久保存缺点：1）频繁地IO操作，效率不高！2）数据管理不方便。例如查询某个数据需要全部读取出来，再匹配。&#x2F;&#x2F;3.数据保存到
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/12/07/MongoDB/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/11/23/vue中路由跳转view却不更新的问题与解决办法/">vue中路由跳转view却不更新的问题与解决办法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-11-23T09:45:38.000Z" itemprop="datePublished">
+          2020-11-23
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        vue中路由跳转view却不更新的问题与解决办法一般情况下路由从/myrouter跳转至/yourrouter时，view会发生更新。
+1若遇到&#x2F;products&#x2F;:id这样只改变id号的场景。就不会发生更新
+
+情况如下：
+router.js
+12345&#123;    path: &quot;&#x2F;products&#x2F;:id&quot;,    name: &quot;product&quot;, 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/11/23/vue中路由跳转view却不更新的问题与解决办法/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/11/03/正则表达式/">正则表达式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-11-03T07:23:04.000Z" itemprop="datePublished">
+          2020-11-03
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        正则表达式正则就是对字符串进行查找、匹配、替换等操作的一串“规则字符串”
+使用方法：在一对斜杠之间添加正则表达式 如：**/** 正则表达式 /
+正则表达式的组成
+普通字符
+特殊字符（元字符）：正则表达式中具有特殊意义的字符
+
+元字符
+
+
+\d
+表示数字
+
+
+
+\D
+非数字
+
+
+\s
+空格符
+
+
+\S
+非空格符
+
+
+\w
+字母或数字或下划线
+
+
+\W
+非字母、数字、下划线
+
+
+.
+任意字符（不包含换行符）
+
+
+\b
+单词边界
+
+
+实例1
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/11/03/正则表达式/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/10/08/Canvas的基本使用/">Canvas的基本使用</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-10-08T09:35:13.000Z" itemprop="datePublished">
+          2020-10-08
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Canvas的基本使用
+canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。
+
+体验Canvas什么是Canvas？HTML5 的 canvas 元素使用 J
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/10/08/Canvas的基本使用/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/09/14/Javascript-日常记录/">Javascript 日常记录</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-09-14T09:34:05.000Z" itemprop="datePublished">
+          2020-09-14
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Javascript 日常记录1、【数组去重】 四行代码原理：利用Js中对象的属性名不可重复的特点对数组进行去重操作
+若有数组:
+1arr &#x3D; [&#39;a&#39;,&#39;v&#39;,&#39;a&#39;,&#39;b&#39;,&#39;e&#39;,&#39;b&#39;,&#39;w&#39;,&#39;x&#39;]
+
+123456&lt;script&gt;    var object &#x3D; &#
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/09/14/Javascript-日常记录/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/09/02/url-js/">url.js</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-09-02T06:32:22.000Z" itemprop="datePublished">
+          2020-09-02
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        URL.js简介
+URI.js是一个用于处理URL的JavaScript库。可以对URI进行解析， 它提供了一个 jQuery风格 API（Fluent Interface，Method Chaining）来读写所有常规组件和一些方便的方法，如.directory（）和.authority（）。
+URI.js提供了简单但强大的查询字符串处理方式，具有许多URI规范化函数并转换相对/绝对路径。
+而URI.js提供了一个jQuery插件。 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/09/02/url-js/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/08/05/Git/">Git</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-08-05T04:31:06.000Z" itemprop="datePublished">
+          2020-08-05
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Git
+专有名词：
+
+
+Workspace：工作区
+Index / Stage：暂存区
+Repository：仓库区（或本地仓库）
+Remote：远程仓库
+
+
+快速使用代码拉取
+1$ git clone + Git仓库的地址
+
+切换分支
+12$ git branch -a  &#x2F;&#x2F;查看分支$ git checkout -b dev-0930 origin&#x2F;dev-0930  &#x2F;&#x2F;切换分支
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/08/05/Git/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          
+          <a class="pull-right" href="/page/2/">Older Posts →</a>
+        </nav>
+    </div>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>url.js | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-09-02T06:32:22.000Z" itemprop="datePublished">
+          2020-09-02
+      </time>
+    
+</span>
+                <h1>url.js</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="URL-js"><a href="#URL-js" class="headerlink" title="URL.js"></a>URL.js</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>URI.js是一个用于处理URL的JavaScript库。可以对URI进行解析， 它提供了一个 jQuery风格 API（Fluent Interface，Method Chaining）来读写所有常规组件和一些方便的方法，如.directory（）和.authority（）。</p>
+<p>URI.js提供了简单但强大的查询字符串处理方式，具有许多URI规范化函数并转换相对/绝对路径。</p>
+<p>而URI.js提供了一个jQuery插件。 URI.js本身不依赖于 jQuery 。 您不需要jQuery来使用URI.js</p>
+</blockquote>
+<h2 id="API示例"><a href="#API示例" class="headerlink" title="API示例"></a>API示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">URI(&quot;http:&#x2F;&#x2F;example.org&#x2F;foo.html?hello&#x3D;world&quot;)</span><br><span class="line">    .username(&quot;rodneyrehm&quot;)</span><br><span class="line">&#x2F;&#x2F; -&gt; http:&#x2F;&#x2F;rodneyrehm@example.org&#x2F;foo.html?hello&#x3D;world</span><br><span class="line">    .username(&quot;&quot;)</span><br><span class="line">&#x2F;&#x2F; -&gt; http:&#x2F;&#x2F;example.org&#x2F;foo.html?hello&#x3D;world</span><br><span class="line">    .directory(&quot;bar&quot;)</span><br><span class="line">&#x2F;&#x2F; -&gt; http:&#x2F;&#x2F;example.org&#x2F;bar&#x2F;foo.html?hello&#x3D;world   添加路径</span><br><span class="line">    .suffix(&quot;xml&quot;)</span><br><span class="line">&#x2F;&#x2F; -&gt; http:&#x2F;&#x2F;example.org&#x2F;bar&#x2F;foo.xml?hello&#x3D;world    添加后缀</span><br><span class="line">    .query(&quot;&quot;)</span><br><span class="line">&#x2F;&#x2F; -&gt; http:&#x2F;&#x2F;example.org&#x2F;bar&#x2F;foo.xml                添加查询条件</span><br><span class="line">    .tld(&quot;com&quot;)</span><br><span class="line">&#x2F;&#x2F; -&gt; http:&#x2F;&#x2F;example.com&#x2F;bar&#x2F;foo.xml                修改域名后缀</span><br><span class="line">    .query(&#123; foo: &quot;bar&quot;, hello: [&quot;world&quot;, &quot;mars&quot;] &#125;);</span><br><span class="line">&#x2F;&#x2F; -&gt; http:&#x2F;&#x2F;example.com&#x2F;bar&#x2F;foo.xml?foo&#x3D;bar&amp;hello&#x3D;world&amp;hello&#x3D;mars</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 简化</span><br><span class="line">URI(&quot;?&amp;foo&#x3D;bar&amp;&amp;foo&#x3D;bar&amp;foo&#x3D;baz&amp;&quot;)</span><br><span class="line">    .normalizeQuery();</span><br><span class="line">&#x2F;&#x2F; -&gt; ?foo&#x3D;bar&amp;foo&#x3D;baz</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取相对路径</span><br><span class="line">URI(&quot;&#x2F;foo&#x2F;bar&#x2F;baz.html&quot;)</span><br><span class="line">    .relativeTo(&quot;&#x2F;foo&#x2F;bar&#x2F;world.html&quot;);</span><br><span class="line">&#x2F;&#x2F; -&gt; .&#x2F;baz.html</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取绝对路径</span><br><span class="line">URI(&quot;&#x2F;foo&#x2F;bar&#x2F;baz.html&quot;)</span><br><span class="line">    .relativeTo(&quot;&#x2F;foo&#x2F;bar&#x2F;sub&#x2F;world.html&quot;)</span><br><span class="line">&#x2F;&#x2F; -&gt; ..&#x2F;baz.html</span><br><span class="line">    .absoluteTo(&quot;&#x2F;foo&#x2F;bar&#x2F;sub&#x2F;world.html&quot;);</span><br><span class="line">&#x2F;&#x2F; -&gt; &#x2F;foo&#x2F;bar&#x2F;baz.html</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; uri模板</span><br><span class="line">URI.expand(&quot;&#x2F;foo&#x2F;&#123;dir&#125;&#x2F;&#123;file&#125;&quot;, &#123;</span><br><span class="line">    dir: &quot;bar&quot;,</span><br><span class="line">    file: &quot;world.html&quot;</span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F; -&gt; &#x2F;foo&#x2F;bar&#x2F;world.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h2><h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">var uri &#x3D; new URI(); &#x2F;&#x2F;相当于 new URI(location.href)</span><br><span class="line">var uri &#x3D; new URI(&quot;http:&#x2F;&#x2F;example.org&quot;); &#x2F;&#x2F;新建一个uri</span><br><span class="line">var uri &#x3D; new URI(new URI(&quot;http:&#x2F;&#x2F;example.org&quot;)); &#x2F;&#x2F;clone一个uri</span><br><span class="line">var uri &#x3D; new URI(&quot;http:&#x2F;&#x2F;example.org&quot;).clone(); &#x2F;&#x2F;clone一个uri</span><br><span class="line">var uri &#x3D; new URI(&#123;</span><br><span class="line">    protocol: &quot;http&quot;, &#x2F;&#x2F; no trailing :</span><br><span class="line">    username: &quot;user&quot;,</span><br><span class="line">    password: &quot;pass&quot;,</span><br><span class="line">    hostname: &quot;example.org&quot;,</span><br><span class="line">    port: &quot;80&quot;, &#x2F;&#x2F; 这里是string，不是数字</span><br><span class="line">    path: &quot;&#x2F;foo&#x2F;bar.html&quot;,  </span><br><span class="line">    query: &quot;foo&#x3D;bar&amp;bar&#x3D;baz&quot;, &#x2F;&#x2F; 注意，是&quot;query&quot;，不是&quot;search&quot;，而且，不要在前面加&quot;?&quot;</span><br><span class="line">    fragment: &quot;frag&quot; &#x2F;&#x2F; 注意，是&quot;fragment&quot;，不是&quot;hash&quot;，而且，不要在前面加&quot;#&quot;</span><br><span class="line">&#125;); &#x2F;&#x2F;用对象方式新建uri</span><br><span class="line"></span><br><span class="line">var parts &#x3D; &#123;</span><br><span class="line">    protocol: &quot;http&quot;,</span><br><span class="line">    username: null,</span><br><span class="line">    password: null,</span><br><span class="line">    hostname: &quot;example.org&quot;,</span><br><span class="line">    port: null,</span><br><span class="line">    path: &quot;&#x2F;foo.html&quot;,</span><br><span class="line">    query: null,</span><br><span class="line">    fragment: null</span><br><span class="line">&#125;;</span><br><span class="line">URI.build(parts) &#x3D;&#x3D;&#x3D; &quot;http:&#x2F;&#x2F;example.org&#x2F;foo.html&quot;;</span><br><span class="line"></span><br><span class="line">var parts &#x3D; &#123;</span><br><span class="line">    username: &quot;user&quot;,</span><br><span class="line">    password: &quot;pass&quot;,</span><br><span class="line">    hostname: &quot;example.org&quot;,</span><br><span class="line">    port: &quot;8080&quot;</span><br><span class="line">&#125;;</span><br><span class="line">URI.buildAuthority(parts) &#x3D;&#x3D;&#x3D; &quot;user:pass@example.org:8080&quot;;</span><br><span class="line"></span><br><span class="line">var parts &#x3D; &#123;</span><br><span class="line">    username: &quot;user&quot;,</span><br><span class="line">    password: &quot;pass&quot;</span><br><span class="line">&#125;;</span><br><span class="line">URI.buildUserinfo(parts) &#x3D;&#x3D;&#x3D; &quot;user:pass@&quot;;</span><br><span class="line"></span><br><span class="line">var parts &#x3D; &#123;</span><br><span class="line">    hostname: &quot;example.org&quot;,</span><br><span class="line">    port: &quot;8080&quot;</span><br><span class="line">&#125;;</span><br><span class="line">URI.buildHost(parts) &#x3D;&#x3D;&#x3D; &quot;example.org:8080&quot;;</span><br><span class="line"></span><br><span class="line">var data &#x3D; &#123;</span><br><span class="line">    foo: &quot;bar&quot;,</span><br><span class="line">    hello: [&quot;world&quot;, &quot;mars&quot;, &quot;mars&quot;],</span><br><span class="line">    bam: &quot;&quot;,</span><br><span class="line">    yup: null,</span><br><span class="line">    removed: undefined</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F; 注意，默认情况下，同一个键相同的值会被合并</span><br><span class="line">URI.buildQuery(data) &#x3D;&#x3D;&#x3D; &quot;foo&#x3D;bar&amp;hello&#x3D;world&amp;hello&#x3D;mars&amp;bam&#x3D;&amp;yup&quot;;</span><br><span class="line">&#x2F;&#x2F; 调用时传入true则会保留相同的值</span><br><span class="line">URI.buildQuery(data, true) &#x3D;&#x3D;&#x3D; &quot;foo&#x3D;bar&amp;hello&#x3D;world&amp;hello&#x3D;mars&amp;hello&#x3D;mars&amp;bam&#x3D;&amp;yup&quot;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">var uri &#x3D; new URI(&quot;http:&#x2F;&#x2F;user:pass@example.org:80&#x2F;foo&#x2F;hello.html&quot;);</span><br><span class="line">uri.href() &#x3D;&#x3D;&#x3D; &quot;http:&#x2F;&#x2F;user:pass@example.org:80&#x2F;foo&#x2F;hello.html&quot;;</span><br><span class="line">uri.toString() &#x3D;&#x3D;&#x3D; &quot;http:&#x2F;&#x2F;user:pass@example.org:80&#x2F;foo&#x2F;hello.html&quot;;</span><br><span class="line">uri.protocol(); &#x2F;&#x2F; &quot;http&quot;，protocol()别名为scheme()</span><br><span class="line">uri.username(); &#x2F;&#x2F; &quot;user&quot;</span><br><span class="line">uri.password(); &#x2F;&#x2F; &quot;pass&quot;</span><br><span class="line">uri.hostname(); &#x2F;&#x2F; &quot;example.org&quot;，注意，hostname()返回的hostname不包含port</span><br><span class="line">uri.port(); &#x2F;&#x2F; &quot;80&quot;</span><br><span class="line">uri.host(); &#x2F;&#x2F; &quot;example.org:80&quot;</span><br><span class="line">uri.userinfo(); &#x2F;&#x2F; &quot;user:pass&quot;，即username+password</span><br><span class="line">uri.authority(); &#x2F;&#x2F; &quot;user:pass@example.org:80&quot;，即username+password+hostname+port</span><br><span class="line">uri.origin(); &#x2F;&#x2F; &quot;http:&#x2F;&#x2F;user:pass@example.org:80&quot;，即protocol+authority</span><br><span class="line">uri.domain(); &#x2F;&#x2F; &quot;example.org&quot;。如果url是“www.example.org”，那么hostname为“www.example.org”，而domain为“example.org”</span><br><span class="line">uri.subdomain(); &#x2F;&#x2F; &quot;&quot;，如果url是“www.example.org”，那么返回&quot;www&quot;</span><br><span class="line">uri.tld(); &#x2F;&#x2F; &quot;org&quot;</span><br><span class="line">uri.pathname(); &#x2F;&#x2F; &quot;&#x2F;foo&#x2F;hello.html&quot;，pathname()别名为path()</span><br><span class="line">uri.directory(); &#x2F;&#x2F; &quot;&#x2F;foo&quot; 结尾没斜杠</span><br><span class="line">&#x2F;&#x2F;关于特殊字符有以下情况</span><br><span class="line">&#x2F;&#x2F;uri.directory(&quot;&#x2F;hello world&#x2F;&quot;);</span><br><span class="line">&#x2F;&#x2F;uri.directory() &#x3D;&#x3D;&#x3D; &quot;&#x2F;hello%20world&quot;;</span><br><span class="line">&#x2F;&#x2F;uri.directory(true) &#x3D;&#x3D;&#x3D; &quot;&#x2F;hello world&quot;;</span><br><span class="line">uri.filename(); &#x2F;&#x2F; &quot;hello.html&quot; 开头没斜杠</span><br><span class="line">&#x2F;&#x2F;关于特殊字符有以下情况</span><br><span class="line">&#x2F;&#x2F;uri.filename(&quot;hello world.html&quot;);</span><br><span class="line">&#x2F;&#x2F;uri.filename() &#x3D;&#x3D;&#x3D; &quot;hello%20world.html&quot;;</span><br><span class="line">&#x2F;&#x2F;uri.filename(true) &#x3D;&#x3D;&#x3D; &quot;hello world.html&quot;;</span><br><span class="line">uri.suffix(); &#x2F;&#x2F; &quot;html&quot; 开头没“.”</span><br><span class="line">&#x2F;&#x2F;关于特殊字符有以下情况</span><br><span class="line">&#x2F;&#x2F;uri.suffix(&quot;würgh&quot;);</span><br><span class="line">&#x2F;&#x2F;uri.suffix() &#x3D;&#x3D;&#x3D; &quot;w%C3%BCrgh&quot;;</span><br><span class="line">&#x2F;&#x2F;uri.suffix(true) &#x3D;&#x3D;&#x3D; &quot;würgh&quot;;</span><br><span class="line">uri.segment(); &#x2F;&#x2F; 返回[&quot;foo&quot;, &quot;hello.html&quot;]，表示路径的directory</span><br><span class="line">&#x2F;&#x2F;uri.segment([&quot;foo&quot;, &quot;bar&quot;, &quot;foobar.html&quot;]); &#x2F;&#x2F; 将路径设置为http:&#x2F;&#x2F;user:pass@example.org:80&#x2F;foo&#x2F;bar&#x2F;foobar.html</span><br><span class="line">uri.segment(0); &#x2F;&#x2F; 返回&quot;foo&quot;</span><br><span class="line">uri.segmentCoded(); &#x2F;&#x2F; 返回[&quot;foo&quot;, &quot;hello.html&quot;]，功能与segment相同，只是会在返回结果时自动解码</span><br><span class="line"></span><br><span class="line">var result &#x3D; URI.parse(&quot;http:&#x2F;&#x2F;example.org&#x2F;foo.html&quot;);</span><br><span class="line">result &#x3D;&#x3D;&#x3D; &#123;</span><br><span class="line">    protocol: &quot;http&quot;,</span><br><span class="line">    username: null,</span><br><span class="line">    password: null,</span><br><span class="line">    hostname: &quot;example.org&quot;,</span><br><span class="line">    port: null,</span><br><span class="line">    path: &quot;&#x2F;foo.html&quot;,</span><br><span class="line">    query: null,</span><br><span class="line">    fragment: null</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var parts &#x3D; &#123;&#125;;</span><br><span class="line">var result &#x3D; URI.parseAuthority(&quot;user:pass@example.org:8080&#x2F;foo.html&quot;, parts);</span><br><span class="line">result &#x3D;&#x3D;&#x3D; &quot;&#x2F;foo.html&quot;;</span><br><span class="line">parts &#x3D;&#x3D;&#x3D; &#123;</span><br><span class="line">    username: &quot;user&quot;,</span><br><span class="line">    password: &quot;pass&quot;,</span><br><span class="line">    hostname: &quot;example.org&quot;,</span><br><span class="line">    port: &quot;8080&quot;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var parts &#x3D; &#123;&#125;;</span><br><span class="line">var result &#x3D; URI.parseUserinfo(&quot;user:pass@example.org:8080&#x2F;foo.html&quot;, parts);</span><br><span class="line">result &#x3D;&#x3D;&#x3D; &quot;example.org:8080&#x2F;foo.html&quot;;</span><br><span class="line">parts &#x3D;&#x3D;&#x3D; &#123;</span><br><span class="line">    username: &quot;user&quot;,</span><br><span class="line">    password: &quot;pass&quot;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var parts &#x3D; &#123;&#125;;</span><br><span class="line">var result &#x3D; URI.parseHost(&quot;example.org:8080&#x2F;foo.html&quot;, parts);</span><br><span class="line">result &#x3D;&#x3D;&#x3D; &quot;&#x2F;foo.html&quot;;</span><br><span class="line">parts &#x3D;&#x3D;&#x3D; &#123;</span><br><span class="line">    hostname: &quot;example.org&quot;,</span><br><span class="line">    port: &quot;8080&quot;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var result &#x3D; URI.parseQuery(&quot;?foo&#x3D;bar&amp;hello&#x3D;world&amp;hello&#x3D;mars&amp;bam&#x3D;&amp;yup&quot;);</span><br><span class="line">result &#x3D;&#x3D;&#x3D; &#123;</span><br><span class="line">    foo: &quot;bar&quot;,</span><br><span class="line">    hello: [&quot;world&quot;, &quot;mars&quot;],</span><br><span class="line">    bam: &quot;&quot;,</span><br><span class="line">    yup: null</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数解析"><a href="#参数解析" class="headerlink" title="参数解析"></a>参数解析</h3><h4 id="附带参数解析"><a href="#附带参数解析" class="headerlink" title="? 附带参数解析"></a><code>?</code> 附带参数解析</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var uri &#x3D; new URI(&quot;http:&#x2F;&#x2F;example.org&#x2F;foo&#x2F;hello.html?foo&#x3D;bar&amp;bar&#x3D;baz&quot;);</span><br><span class="line">uri.search(); &#x2F;&#x2F; 返回&quot;?foo&#x3D;bar&amp;bar&#x3D;baz&quot;，以&quot;?&quot;开头</span><br><span class="line">uri.query(); &#x2F;&#x2F; 返回&quot;foo&#x3D;bar&amp;bar&#x3D;baz&quot;</span><br><span class="line">uri.search(true); &#x2F;&#x2F; 返回&#123; foo: &quot;bar&quot;, bar : &quot;baz&quot; &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="附带参数"><a href="#附带参数" class="headerlink" title="#附带参数"></a><code>#</code>附带参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var uri &#x3D; new URI(&quot;http:&#x2F;&#x2F;example.org&#x2F;foo&#x2F;hello.html#world&quot;);</span><br><span class="line">uri.hash(); &#x2F;&#x2F; 返回&quot;#world&quot;，以&quot;#&quot;开头</span><br><span class="line">uri.fragment(); &#x2F;&#x2F; 返回&quot;world&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="附带参数地修改"><a href="#附带参数地修改" class="headerlink" title="?附带参数地修改"></a><code>?</code>附带参数地修改</h4><blockquote>
+<p>setSearch 是 setQuery 的别称</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">var uri &#x3D; new URI(&quot;?hello&#x3D;world&quot;);</span><br><span class="line">uri.setSearch(&quot;hello&quot;, &quot;mars&quot;); &#x2F;&#x2F; 返回一个uri，uri内容为&quot;?hello&#x3D;mars&quot;</span><br><span class="line">uri.setSearch(&#123; foo: &quot;bar&quot;, goodbye : [&quot;world&quot;, &quot;mars&quot;] &#125;);</span><br><span class="line">&#x2F;&#x2F; 返回一个uri，uri内容为&quot;?hello&#x3D;mars&amp;foo&#x3D;bar&amp;goodbye&#x3D;world&amp;goodbye&#x3D;mars&quot;</span><br><span class="line">uri.setSearch(&quot;goodbye&quot;, &quot;sun&quot;);&#x2F;&#x2F; 返回一个uri，uri内容为&quot;?hello&#x3D;mars&amp;foo&#x3D;bar&amp;goodbye&#x3D;sun&quot;</span><br><span class="line"></span><br><span class="line">uri &#x3D; new URI(&quot;?hello&#x3D;world&quot;);</span><br><span class="line">uri.addSearch(&quot;hello&quot;, &quot;mars&quot;); &#x2F;&#x2F; 返回一个uri，uri内容为&quot;?hello&#x3D;world&amp;hello&#x3D;mars&quot;</span><br><span class="line">uri.addSearch(&#123; foo: &quot;bar&quot;, goodbye : [&quot;world&quot;, &quot;mars&quot;] &#125;);</span><br><span class="line">&#x2F;&#x2F; 返回一个uri，uri内容为&quot;?hello&#x3D;world&amp;hello&#x3D;mars&amp;foo&#x3D;bar&amp;goodbye&#x3D;world&amp;goodbye&#x3D;mars&quot;</span><br><span class="line">uri.addSearch(&quot;no-value&quot;);</span><br><span class="line">&#x2F;&#x2F;返回一个uri，uri内容为&quot;?hello&#x3D;world&amp;hello&#x3D;mars&amp;foo&#x3D;bar&amp;goodbye&#x3D;world&amp;goodbye&#x3D;mars&amp;no-value&quot;</span><br><span class="line"></span><br><span class="line">uri &#x3D; new URI(&quot;?hello&#x3D;world&amp;hello&#x3D;mars&amp;foo&#x3D;bar&quot;);</span><br><span class="line">uri.removeSearch(&quot;hello&quot;); &#x2F;&#x2F; 返回一个uri，uri内容为&quot;?foo&#x3D;bar&quot;</span><br><span class="line">uri.search(&quot;?hello&#x3D;world&amp;hello&#x3D;mars&amp;foo&#x3D;bar&quot;);</span><br><span class="line">uri.removeSearch(&quot;hello&quot;, &quot;world&quot;); &#x2F;&#x2F; 返回一个uri，uri内容为&quot;?hello&#x3D;mars&amp;foo&#x3D;bar&quot;</span><br><span class="line"></span><br><span class="line">uri.search(&quot;?hello&#x3D;world&amp;hello&#x3D;mars&amp;foo&#x3D;bar&amp;mine&#x3D;true&quot;);</span><br><span class="line">uri.removeSearch([&quot;hello&quot;, &quot;foo&quot;]); &#x2F;&#x2F; 返回一个uri，uri内容为&quot;?mine&#x3D;true&quot;</span><br><span class="line"></span><br><span class="line">uri.search(&quot;?hello&#x3D;world&amp;hello&#x3D;mars&amp;foo&#x3D;bar&amp;mine&#x3D;true&amp;a&#x3D;1&amp;a&#x3D;2&amp;a&#x3D;3&quot;);</span><br><span class="line">uri.removeSearch(&#123;hello: &quot;world&quot;, foo: undefined, a: [&quot;1&quot;, &quot;3&quot;]&#125;);</span><br><span class="line">&#x2F;&#x2F; 返回一个uri，uri内容为&quot;?hello&#x3D;mars&amp;mine&#x3D;true&amp;a&#x3D;2&quot;</span><br><span class="line"></span><br><span class="line">uri.search(&quot;?foo&#x3D;bar&amp;foo&#x3D;baz&amp;foo&#x3D;bam&amp;obj&#x3D;bam&amp;bar&#x3D;bar&amp;bar&#x3D;baz&amp;bar&#x3D;bam&quot;);</span><br><span class="line">uri.removeSearch(&#39;foo&#39;, &#x2F;[rz]$&#x2F;);</span><br><span class="line">&#x2F;&#x2F; 返回一个uri，uri内容为&quot;?foo&#x3D;bam&amp;obj&#x3D;bam&amp;bar&#x3D;bar&amp;bar&#x3D;baz&amp;bar&#x3D;bam&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="附带参数地判断"><a href="#附带参数地判断" class="headerlink" title="?附带参数地判断"></a><code>?</code>附带参数地判断</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">var uri &#x3D; URI(&quot;?string&#x3D;bar&amp;list&#x3D;one&amp;list&#x3D;two&amp;number&#x3D;123&amp;null&amp;empty&#x3D;&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 检查参数是否存在（不管此参数是否有值）</span><br><span class="line">uri.hasQuery(&quot;string&quot;) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line">uri.hasQuery(&quot;nono&quot;) &#x3D;&#x3D;&#x3D; false;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 检查参数的值bool化后为true还是false</span><br><span class="line">uri.hasQuery(&quot;string&quot;, true) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line">uri.hasQuery(&quot;string&quot;, false) &#x3D;&#x3D;&#x3D; false;</span><br><span class="line">uri.hasQuery(&quot;empty&quot;, true) &#x3D;&#x3D;&#x3D; false;</span><br><span class="line">uri.hasQuery(&quot;empty&quot;, false) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 检查参数的值是否为指定值</span><br><span class="line">uri.hasQuery(&quot;string&quot;, &quot;bar&quot;) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line">uri.hasQuery(&quot;number&quot;, 123) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 检查参数的值是否在给定的列表中</span><br><span class="line">uri.hasQuery(&quot;list&quot;, &quot;two&quot;, true) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line">uri.hasQuery(&quot;list&quot;, [&quot;two&quot;], true) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line">uri.hasQuery(&quot;list&quot;, &quot;three&quot;, true) &#x3D;&#x3D;&#x3D; false;</span><br><span class="line">uri.hasQuery(&quot;list&quot;, [&quot;two&quot;, &quot;three&quot;], true) &#x3D;&#x3D;&#x3D; false;</span><br><span class="line">uri.hasQuery(&quot;list&quot;, &#x2F;ne$&#x2F;, true) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 检查参数的值是否符合正则表达式</span><br><span class="line">uri.hasQuery(&quot;string&quot;, &#x2F;ar$&#x2F;) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 检查是否有参数的名称符合正则表达式</span><br><span class="line">uri.hasQuery(&#x2F;^str&#x2F;) &#x3D;&#x3D;&#x3D; true;</span><br><span class="line">&#x2F;&#x2F; 检查符合正则表达式的参数的值是否为指定值</span><br><span class="line">uri.hasQuery(&#x2F;^li&#x2F;, &quot;two&quot;) &#x3D;&#x3D;&#x3D; false;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 通过传入方法判断</span><br><span class="line">uri.hasQuery(&quot;string&quot;, function(value, name, data) &#123;</span><br><span class="line">    &#x2F;&#x2F; value &#x3D;&#x3D;&#x3D; &quot;bar&quot;;</span><br><span class="line">    &#x2F;&#x2F; name &#x3D;&#x3D;&#x3D; &quot;string&quot;;</span><br><span class="line">    &#x2F;&#x2F; data &#x3D;&#x3D;&#x3D; uri.query(true);</span><br><span class="line">    return true;</span><br><span class="line">&#125;) &#x3D;&#x3D;&#x3D; true;</span><br></pre></td></tr></table></figure>
+
+<h3 id="路径转换"><a href="#路径转换" class="headerlink" title="路径转换"></a>路径转换</h3><blockquote>
+<p>relativeTo()和absoluteTo()可以将路径转换为相对路径/绝对路径。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var uri &#x3D; new URI(&quot;&#x2F;relative&#x2F;path&quot;);</span><br><span class="line">&#x2F;&#x2F; make path relative</span><br><span class="line">var relUri &#x3D; uri.relativeTo(&quot;&#x2F;relative&#x2F;sub&#x2F;foo&#x2F;sub&#x2F;file&quot;); &#x2F;&#x2F; 返回一个uri，uri内容为&quot;..&#x2F;..&#x2F;..&#x2F;path&quot;</span><br><span class="line"></span><br><span class="line">var anotherUri &#x3D; relUri.absoluteTo(&quot;&#x2F;relative&#x2F;sub&#x2F;foo&#x2F;sub&#x2F;file&quot;); &#x2F;&#x2F; 返回一个uri，uri内容为&quot;&#x2F;relative&#x2F;path&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">URI.commonPath(&quot;&#x2F;foo&#x2F;bar&#x2F;baz.html&quot;, &quot;&#x2F;foo&#x2F;bar&#x2F;world.html&quot;);&#x2F;&#x2F; 返回&quot;&#x2F;foo&#x2F;bar&#x2F;&quot;</span><br><span class="line">URI.joinPaths(&#39;&#x2F;a&#x2F;b&#39;, &#39;&#x2F;c&#39;, &#39;d&#39;, &#39;&#x2F;e&#39;);&#x2F;&#x2F; 返回URI(&quot;&#x2F;a&#x2F;b&#x2F;c&#x2F;d&#x2F;e&quot;)</span><br><span class="line"></span><br><span class="line">var data &#x3D; &#123;&#125;;</span><br><span class="line"></span><br><span class="line">URI.addQuery(data, &quot;hello&quot;, &quot;mars&quot;);</span><br><span class="line">data &#x3D;&#x3D;&#x3D; &#123;hello: &quot;mars&quot;&#125;;</span><br><span class="line"></span><br><span class="line">URI.addQuery(data, &quot;hello&quot;, &quot;world&quot;);</span><br><span class="line">data &#x3D;&#x3D;&#x3D; &#123;hello: [&quot;mars&quot;, &quot;world&quot;]&#125;;</span><br><span class="line"></span><br><span class="line">URI.addQuery(data, &#123;foo: &quot;bar&quot;, goodbye : [&quot;world&quot;, &quot;mars&quot;]&#125;);</span><br><span class="line">data &#x3D;&#x3D;&#x3D; &#123;hello: [&quot;mars&quot;, &quot;world&quot;], foo: &quot;bar&quot;, goodbye : [&quot;world&quot;, &quot;mars&quot;]&#125;;</span><br><span class="line"></span><br><span class="line">URI.removeQuery(data, &quot;hello&quot;);</span><br><span class="line">data &#x3D;&#x3D;&#x3D; &#123;foo: &quot;bar&quot;, goodbye : [&quot;world&quot;, &quot;mars&quot;]&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 移除指定值</span><br><span class="line">data &#x3D; &#123;hello: [&quot;world&quot;, &quot;mars&quot;], foo: &quot;bar&quot;&#125;;</span><br><span class="line">URI.removeQuery(data, &quot;hello&quot;, &quot;world&quot;);</span><br><span class="line">data &#x3D;&#x3D;&#x3D; &#123;hello: [&quot;mars&quot;], foo: &quot;bar&quot;&#125; &#x2F;&#x2F; yes, still an array</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 移除多个键</span><br><span class="line">data &#x3D; &#123;hello: [&quot;world&quot;, &quot;mars&quot;], foo: &quot;bar&quot;, mine: &quot;true&quot;&#125;</span><br><span class="line">URI.removeQuery(data, [&quot;hello&quot;, &quot;foo&quot;]);</span><br><span class="line">data &#x3D;&#x3D;&#x3D; &#123;mine: &quot;true&quot;&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 移除多个键的指定值</span><br><span class="line">data &#x3D; &#123;hello: [&quot;world&quot;, &quot;mars&quot;], foo: &quot;bar&quot;, mine: &quot;true&quot;, a: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]&#125;</span><br><span class="line">URI.removeQuery(data, &#123;hello: &quot;world&quot;, foo: undefined, a: [&quot;1&quot;, &quot;3&quot;]&#125;);</span><br><span class="line">data &#x3D;&#x3D;&#x3D; &#123;hello: [&quot;mars&quot;], mine: &quot;true&quot;, a: [&quot;2&quot;]&#125;</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/09/14/Javascript-%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" style="float: left;">
+        ← Javascript 日常记录
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/08/05/Git/">
+        Git →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

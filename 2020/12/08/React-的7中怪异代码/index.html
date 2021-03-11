@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>React 的7中怪异代码 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-12-08T09:53:56.000Z" itemprop="datePublished">
+          2020-12-08
+      </time>
+    
+</span>
+                <h1>React 的7中怪异代码</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p> 阅读本文可能花费您 9 分钟</p>
+<p>教你如何更好地写 React。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原文链接：<a target="_blank" rel="noopener" href="https://dev.to/awnton/7-code-smells-in-react-components-5f66">7 code smells in your React components</a></p>
+<p>作者信息：<a target="_blank" rel="noopener" href="https://twitter.com/Awnton">Anton Gunnarsson</a></p>
+<p>翻译许可：</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>自从使用 <code>React</code> 后，我见过越来越多可值得优化的点，比如：</p>
+<ul>
+<li>大量的 <code>props</code></li>
+<li><code>props</code> 的不兼容性</li>
+<li><code>props</code> 复制为 <code>state</code></li>
+<li>返回 <code>JSX</code> 的函数</li>
+<li><code>state</code> 的多个状态</li>
+<li><code>useState</code> 过多</li>
+<li>复杂的 <code>useEffect</code></li>
+</ul>
+<p>在本文中，我想分享几个技巧，这些技巧将改善你的 React 代码。</p>
+<h3 id="大量的-props"><a href="#大量的-props" class="headerlink" title="大量的 props"></a>大量的 props</h3><p>如果需要把大量的 <code>props</code> 传递到一个组件中，那么很有可能 该组件可再进一步拆分。</p>
+<p>问题来了，“大量” 具体是多少呢？答案是 看情况。</p>
+<p>假设你正在开发 一个包含 20 个或更多 <code>props</code> 的组件时，你想再添加一些 <code>props</code> 完善其他功能，这时有两点可以参考 是否应拆分组件：</p>
+<p><strong>该组件是否做了多件事？</strong></p>
+<p>像函数一样，一个组件应该只做好一件事，所以考虑下 将组件拆分成多个小组件是否会更好。</p>
+<p>例如，该组件存在 <a target="_blank" rel="noopener" href="https://tomotoes.com/blog/7-code-smells-in-react-components/"><code>props</code> 的不兼容性</a> 或 <a target="_blank" rel="noopener" href="https://tomotoes.com/blog/7-code-smells-in-react-components/">返回 <code>JSX</code> 的函数</a>。</p>
+<p><strong>该组件是否可被合成</strong>？</p>
+<p>开发中，组合是一种很好的模式但经常被忽视。</p>
+<p>如果你的组件中存在将不相干逻辑塞到一起的情况，是时候考虑使用组合了。</p>
+<p>假设我们有一个表单组件来处理某组织的用户信息:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">COPY&lt;ApplicationForm</span><br><span class="line">  user&#x3D;&#123;userData&#125;</span><br><span class="line">  organization&#x3D;&#123;organizationData&#125;</span><br><span class="line">  categories&#x3D;&#123;categoriesData&#125;</span><br><span class="line">  locations&#x3D;&#123;locationsData&#125;</span><br><span class="line">  onSubmit&#x3D;&#123;handleSubmit&#125;</span><br><span class="line">  onCancel&#x3D;&#123;handleCancel&#125;</span><br><span class="line">  ...</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>通过该组件的 <code>props</code> ，我们可看到它们都与组件提供的功能密切相关。</p>
+<p>该组件看起来并无大碍，但如果将其中的一些 <code>props</code> 分担到子组件，那么数据流就会更清晰。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">COPY&lt;ApplicationForm onSubmit&#x3D;&#123;handleSubmit&#125; onCancel&#x3D;&#123;handleCancel&#125;&gt;</span><br><span class="line">  &lt;ApplicationUserForm user&#x3D;&#123;userData&#125; &#x2F;&gt;</span><br><span class="line">  &lt;ApplicationOrganizationForm organization&#x3D;&#123;organizationData&#125; &#x2F;&gt;</span><br><span class="line">  &lt;ApplicationCategoryForm categories&#x3D;&#123;categoriesData&#125; &#x2F;&gt;</span><br><span class="line">  &lt;ApplicationLocationsForm locations&#x3D;&#123;locationsData&#125; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;ApplicationForm&gt;</span><br></pre></td></tr></table></figure>
+
+<p>现在，我们已经看到该表单组件只处理提交和取消动作，其他范围内的事情，都交给了对应的子组件。</p>
+<p><strong>是否传递了很多有关配置的 props</strong></p>
+<p>在某些情况下，将多个有关配置的 <code>props</code> 组合成一个 <code>options</code> 是个不错的实践。</p>
+<p>假设我们有一个可显示某种表格的组件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">COPY&lt;Grid</span><br><span class="line">  data&#x3D;&#123;gridData&#125;</span><br><span class="line">  pagination&#x3D;&#123;false&#125;</span><br><span class="line">  autoSize&#x3D;&#123;true&#125;</span><br><span class="line">  enableSort&#x3D;&#123;true&#125;</span><br><span class="line">  sortOrder&#x3D;&quot;desc&quot;</span><br><span class="line">  disableSelection&#x3D;&#123;true&#125;</span><br><span class="line">  infiniteScroll&#x3D;&#123;true&#125;</span><br><span class="line">  ...</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>我们可以很清楚地看出，该组件除了 <code>data</code> 外其余的 <code>props</code> 都是与配置有关的。</p>
+<p>如果将多个配置 <code>props</code> 合成为一个 <code>options</code> ，就可更好地控制组件的选项，规范性也得到提升。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">COPYconst options &#x3D; &#123;</span><br><span class="line">  pagination: false,</span><br><span class="line">  autoSize: true,</span><br><span class="line">  enableSort: true,</span><br><span class="line">  sortOrder: &#39;desc&#39;,</span><br><span class="line">  disableSelection: true,</span><br><span class="line">  infiniteScroll: true,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;Grid</span><br><span class="line">  data&#x3D;&#123;gridData&#125;</span><br><span class="line">  options&#x3D;&#123;options&#125;</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="props-的不兼容性"><a href="#props-的不兼容性" class="headerlink" title="props 的不兼容性"></a>props 的不兼容性</h3><p>避免组件之间传递不兼容的 <code>props</code>。</p>
+<p>假设你的组件库中有一个 <code>&lt;Input /&gt;</code> 组件，而该组件开始时仅用于处理文本，但过了一段时间后，你将它用于电话号码处理。</p>
+<p>你的实现可能如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Input(&#123; value, isPhoneNumberInput, autoCapitalize &#125;) &#123;</span><br><span class="line">  if (autoCapitalize) capitalize(value)</span><br><span class="line"></span><br><span class="line">  return &lt;input value&#x3D;&#123;value&#125; type&#x3D;&#123;isPhoneNumberInput ? &#39;tel&#39; : &#39;text&#39;&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>问题在于，<code>isPhoneNumberInput</code> 与 <code>autoCapitalize</code> 之间并不存在关联，将一个手机号首字母大写是没有任何意义的。</p>
+<p>在这种情况下，我们可以将其分割成多个小组件，来明确具体的职责，如果有共享逻辑，可以将其放到 <code>hooks</code> 中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction TextInput(&#123; value, autoCapitalize &#125;) &#123;</span><br><span class="line">  if (autoCapitalize) capitalize(value)</span><br><span class="line">  useSharedInputLogic()</span><br><span class="line"></span><br><span class="line">  return &lt;input value&#x3D;&#123;value&#125; type&#x3D;&quot;text&quot; &#x2F;&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function PhoneNumberInput(&#123; value &#125;) &#123;</span><br><span class="line">  useSharedInputLogic()</span><br><span class="line"></span><br><span class="line">  return &lt;input value&#x3D;&#123;value&#125; type&#x3D;&quot;tel&quot; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>虽然上面例子有点勉强，可当发现组件的<code>props</code>存在不兼容性时，是时候考虑拆分组件了。</p>
+<h3 id="props-复制为-state"><a href="#props-复制为-state" class="headerlink" title="props 复制为 state"></a>props 复制为 state</h3><p>如何更好地将 <code>props</code> 作为 <code>state</code> 的初始值。</p>
+<p>有如下组件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Button(&#123; text &#125;) &#123;</span><br><span class="line">  const [buttonText] &#x3D; useState(text)</span><br><span class="line"></span><br><span class="line">  return &lt;button&gt;&#123;buttonText&#125;&lt;&#x2F;button&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该组件将 <code>text</code> 作为 <code>useState</code> 的初始值，可能会导致意想不到的行为。</p>
+<p>实际上该组件已经关掉了 <code>props</code> 的更新通知，如果 <code>text</code> 在上层被更新，它将仍呈现 接受到 <code>text</code> 的第一次值，这更容易使组件出错。</p>
+<p>一个更实际场景是，我们想基于 <code>props</code> 通过大量计算来得到新的 <code>state</code>。</p>
+<p>在下面的例子中，<code>slowlyFormatText</code> 函数用于格式化 <code>text</code>，注意 需要很长时间才能完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Button(&#123; text &#125;) &#123;</span><br><span class="line">  const [formattedText] &#x3D; useState(() &#x3D;&gt; slowlyFormatText(text))</span><br><span class="line"></span><br><span class="line">  return &lt;button&gt;&#123;formattedText&#125;&lt;&#x2F;button&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解决此问题 最好的方案是 使用 <code>useMemo</code> 代替 <code>useState</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Button(&#123; text &#125;) &#123;</span><br><span class="line">  const formattedText &#x3D; useMemo(() &#x3D;&gt; slowlyFormatText(text), [text])</span><br><span class="line"></span><br><span class="line">  return &lt;button&gt;&#123;formattedText&#125;&lt;&#x2F;button&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在 <code>slowFormatFormat</code> 仅在 <code>text</code> 更改时运行，并且没有阻断 上层组件更新。</p>
+<p>进一步阅读：<a target="_blank" rel="noopener" href="https://overreacted.io/writing-resilient-components/">Writing resilient components by Dan Abramov</a>。</p>
+<h3 id="返回-JSX-的函数"><a href="#返回-JSX-的函数" class="headerlink" title="返回 JSX 的函数"></a>返回 JSX 的函数</h3><p>不要从组件内部的函数中返回 <code>JSX</code>。</p>
+<p>这种模式虽然很少出现，但我还是时不时碰到。</p>
+<p>仅举一个例子来说明:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Component() &#123;</span><br><span class="line">  const topSection &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;header&gt;</span><br><span class="line">        &lt;h1&gt;Component header&lt;&#x2F;h1&gt;</span><br><span class="line">      &lt;&#x2F;header&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const middleSection &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;main&gt;</span><br><span class="line">        &lt;p&gt;Some text&lt;&#x2F;p&gt;</span><br><span class="line">      &lt;&#x2F;main&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const bottomSection &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;Some footer text&lt;&#x2F;p&gt;</span><br><span class="line">      &lt;&#x2F;footer&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &#123;topSection()&#125;</span><br><span class="line">      &#123;middleSection()&#125;</span><br><span class="line">      &#123;bottomSection()&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该例子虽然看起来没什么问题，但其实这会破坏代码的整体性，使维护变得困难。</p>
+<p>要么把函数返回的 <code>JSX</code> 直接内联到组件内，要么将其拆分成一个组件。</p>
+<p>有一点需要注意，如果你创建了一个新组件，不必将其移动到新文件中的。</p>
+<p>如果多个组件紧密耦合，将它们保存在同一个文件中是有意义的。</p>
+<h3 id="state-的多个状态"><a href="#state-的多个状态" class="headerlink" title="state 的多个状态"></a>state 的多个状态</h3><p>避免使用多个布尔值来表示组件状态。</p>
+<p>当编写一个组件并多次迭代后，很容易出现这样一种情况，即内部有多个布尔值来表示 该组件处于哪种状态。</p>
+<p>比如下面的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Component() &#123;</span><br><span class="line">  const [isLoading, setIsLoading] &#x3D; useState(false)</span><br><span class="line">  const [isFinished, setIsFinished] &#x3D; useState(false)</span><br><span class="line">  const [hasError, setHasError] &#x3D; useState(false)</span><br><span class="line"></span><br><span class="line">  const fetchSomething &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    setIsLoading(true)</span><br><span class="line"></span><br><span class="line">    fetch(url)</span><br><span class="line">      .then(() &#x3D;&gt; &#123;</span><br><span class="line">        setIsLoading(false)</span><br><span class="line">        setIsFinished(true)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(() &#x3D;&gt; &#123;</span><br><span class="line">        setHasError(true)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (isLoading) return &lt;Loader &#x2F;&gt;</span><br><span class="line">  if (hasError) return &lt;Error &#x2F;&gt;</span><br><span class="line">  if (isFinished) return &lt;Success &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">  return &lt;button onClick&#x3D;&#123;fetchSomething&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当按钮被点击时，我们将 <code>isLoading</code> 设置为 <code>true</code>，并通过 <code>fetch</code> 执行网络请求。</p>
+<p>如果请求成功，我们将 <code>isLoading</code> 设置为 <code>false</code>，<code>isFinished</code> 设置为 <code>true</code>，如果有错误，将 <code>hasError</code> 设置为 <code>true</code>。</p>
+<p>虽然这在技术上是可行的，但很难推断出组件处于什么状态，而且不容易维护。</p>
+<p>并且有可能最终处于“不可能的状态”，比如我们不小心同时将 <code>isLoading</code> 和 <code>isFinished</code> 设置为 <code>true</code>。</p>
+<p>解决此问题一劳永逸的方案是 使用枚举来管理状态。</p>
+<p>在其他语言中，枚举是一种定义变量的方式，该变量只允许设置为预定义的常量值集合，虽然在<code>JavaScript</code> 中不存在枚举，但我们可以使用字符串作为枚举：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Component() &#123;</span><br><span class="line">  const [state, setState] &#x3D; useState(&#39;idle&#39;)</span><br><span class="line"></span><br><span class="line">  const fetchSomething &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    setState(&#39;loading&#39;)</span><br><span class="line"></span><br><span class="line">    fetch(url)</span><br><span class="line">      .then(() &#x3D;&gt; &#123;</span><br><span class="line">        setState(&#39;finished&#39;)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(() &#x3D;&gt; &#123;</span><br><span class="line">        setState(&#39;error&#39;)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (state &#x3D;&#x3D;&#x3D; &#39;loading&#39;) return &lt;Loader &#x2F;&gt;</span><br><span class="line">  if (state &#x3D;&#x3D;&#x3D; &#39;error&#39;) return &lt;Error &#x2F;&gt;</span><br><span class="line">  if (state &#x3D;&#x3D;&#x3D; &#39;finished&#39;) return &lt;Success &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">  return &lt;button onClick&#x3D;&#123;fetchSomething&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过这种方式，完全杜绝了出现 不可能状态的情况，并更利用扩展。</p>
+<p>如果你使用 <code>TypeScript</code> 开发的话，则可以从定义时就实现枚举：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COPYconst [state, setState] &#x3D; useState&lt;&#39;idle&#39; | &#39;loading&#39; | &#39;error&#39; | &#39;finished&#39;&gt;(&#39;idle&#39;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="useState-过多"><a href="#useState-过多" class="headerlink" title="useState 过多"></a>useState 过多</h3><p>避免在同一个组件中使用太多的 <code>useState</code>。</p>
+<p>一个包含许多 <code>useState</code> 的组件可能会做多件事情，可以考虑是否要拆分它。</p>
+<p>当然也存在一些复杂的场景，我们需要在组件中管理一些复杂的状态。</p>
+<p>下面是自动输入组件的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction AutocompleteInput() &#123;</span><br><span class="line">  const [isOpen, setIsOpen] &#x3D; useState(false)</span><br><span class="line">  const [inputValue, setInputValue] &#x3D; useState(&#39;&#39;)</span><br><span class="line">  const [items, setItems] &#x3D; useState([])</span><br><span class="line">  const [selectedItem, setSelectedItem] &#x3D; useState(null)</span><br><span class="line">  const [activeIndex, setActiveIndex] &#x3D; useState(-1)</span><br><span class="line"></span><br><span class="line">  const reset &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    setIsOpen(false)</span><br><span class="line">    setInputValue(&#39;&#39;)</span><br><span class="line">    setItems([])</span><br><span class="line">    setSelectedItem(null)</span><br><span class="line">    setActiveIndex(-1)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const selectItem &#x3D; (item) &#x3D;&gt; &#123;</span><br><span class="line">    setIsOpen(false)</span><br><span class="line">    setInputValue(item.name)</span><br><span class="line">    setSelectedItem(item)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们有一个 <code>reset</code> 函数，可以重置所有状态，还有一个 <code>selectItem</code> 函数，可更新一些状态。</p>
+<p>这些函数都离不开 <code>useState</code> 定义的状态。如果功能继续迭代，那么函数就会越来越多，状态也会随之增加，数据流就会变得模糊不清。</p>
+<p>在这种情况下，使用 <code>useReducer</code> 来代替 过多的 <code>useState</code> 是一个不错的选择。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">COPYconst initialState &#x3D; &#123;</span><br><span class="line">  isOpen: false,</span><br><span class="line">  inputValue: &quot;&quot;,</span><br><span class="line">  items: [],</span><br><span class="line">  selectedItem: null,</span><br><span class="line">  activeIndex: -1</span><br><span class="line">&#125;</span><br><span class="line">function reducer(state, action) &#123;</span><br><span class="line">  switch (action.type) &#123;</span><br><span class="line">    case &quot;reset&quot;:</span><br><span class="line">      return &#123;</span><br><span class="line">        ...initialState</span><br><span class="line">      &#125;</span><br><span class="line">    case &quot;selectItem&quot;:</span><br><span class="line">      return &#123;</span><br><span class="line">        ...state,</span><br><span class="line">        isOpen: false,</span><br><span class="line">        inputValue: action.payload.name,</span><br><span class="line">        selectedItem: action.payload</span><br><span class="line">      &#125;</span><br><span class="line">    default:</span><br><span class="line">      throw Error()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function AutocompleteInput() &#123;</span><br><span class="line">  const [state, dispatch] &#x3D; useReducer(reducer, initialState)</span><br><span class="line"></span><br><span class="line">  const reset &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    dispatch(&#123; type: &#39;reset&#39; &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const selectItem &#x3D; (item) &#x3D;&gt; &#123;</span><br><span class="line">    dispatch(&#123; type: &#39;selectItem&#39;, payload: item &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过使用 <code>reducer</code>，我们封装了管理状态的逻辑，并将复杂的逻辑移出了组件，这使得组件更容易维护。</p>
+<p>进一步阅读：<a target="_blank" rel="noopener" href="https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks">state reducer pattern by Kent C. Dodds</a>。</p>
+<h3 id="复杂的-useEffect"><a href="#复杂的-useEffect" class="headerlink" title="复杂的 useEffect"></a>复杂的 useEffect</h3><p>避免在 <code>useEffect</code> 中做太多事情，它们使代码易于出错，并且难以推理。</p>
+<p>下面的例子中 犯了一个很大的错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Post(&#123; id, unlisted &#125;) &#123;</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123;</span><br><span class="line">    fetch(&#96;&#x2F;posts&#x2F;$&#123;id&#125;&#96;).then(&#x2F;* do something *&#x2F;)</span><br><span class="line"></span><br><span class="line">    setVisibility(unlisted)</span><br><span class="line">  &#125;, [id, unlisted])</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当 <code>unlisted</code> 改变时，即使 <code>id</code> 没有变，也会调用 <code>fetch</code>。</p>
+<p>正确的写法应该是 将多个依赖分离：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">COPYfunction Post(&#123; id, unlisted &#125;) &#123;</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123; &#x2F;&#x2F; when id changes fetch the post</span><br><span class="line">    fetch(&#96;&#x2F;posts&#x2F;$&#123;id&#125;&#96;).then(&#x2F;* ... *&#x2F;)</span><br><span class="line">  &#125;, [id])</span><br><span class="line"></span><br><span class="line">  useEffect(() &#x3D;&gt; &#123; &#x2F;&#x2F; when unlisted changes update visibility</span><br><span class="line">    setVisibility(unlisted)</span><br><span class="line">  &#125;, [unlisted])</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>以上就是我分享的全部。请记住，这些绝不是规则，而是表明某些东西可能是“错误的”。</p>
+<p>如果你也发现了其他的问题模式，欢迎发表评论，或者在 <a target="_blank" rel="noopener" href="https://twitter.com/awnton">Twitter</a> 上联系我。</p>
+<p>转载本站文章请注明作者和出处 <a target="_blank" rel="noopener" href="http://tomotoes.com/">一个坏掉的番茄</a>，请勿用于任何商业用途。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2021/03/10/hello-world/" style="float: left;">
+        ← Hello World
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/12/07/MongoDB/">
+        MongoDB →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

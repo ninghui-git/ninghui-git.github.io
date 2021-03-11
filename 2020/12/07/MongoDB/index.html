@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>MongoDB | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-12-07T09:47:18.000Z" itemprop="datePublished">
+          2020-12-07
+      </time>
+    
+</span>
+                <h1>MongoDB</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;缓存---&gt;文件---&gt;关系型数据库</span><br><span class="line">&#x2F;&#x2F;1.数据保存到内存：</span><br><span class="line">优点：</span><br><span class="line">1）读写非常快</span><br><span class="line">缺点：</span><br><span class="line">1）程序关闭导致数据丢失</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2.数据保存到文件：</span><br><span class="line">优点：</span><br><span class="line">1）数据可以永久保存</span><br><span class="line">缺点：</span><br><span class="line">1）频繁地IO操作，效率不高！</span><br><span class="line">2）数据管理不方便。例如查询某个数据需要全部读取出来，再匹配。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;3.数据保存到数据库软件：</span><br><span class="line">优点：</span><br><span class="line">1）数据永久保存下来</span><br><span class="line">2）数据管理非常方便。（例如查询非常快速和方便）</span><br></pre></td></tr></table></figure>
+
+<h3 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">关系型数据库（Mysql和Oracle） ： 表和表、表和字段、数据和数据存在着关系</span><br><span class="line"></span><br><span class="line">优点:</span><br><span class="line">1.数据之间有关系，进行数据的增删改查的时候是非常方便的</span><br><span class="line">2.关系型数据库是有事务操作的，保证数据的完整性和一致性。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">1.因为数据和数据是有关系的，底层是运行了大量的算法。大量算法会降低系统的效率，会降低性能</span><br><span class="line">2.数据存在硬盘中，面对海量数据的增删改查的时候会显的无能为力，面对海量数据对数据进行维护变得非常的无力</span><br><span class="line">3.限制字段：比如现在数据库中已经有10万条数据了（在今天10万条都不算大数据），如果想从下一条数据开始增加一些字段，此时之前的10万条数据都需要一同被更改。SQL中，表的字段是不能自由更改的，不能某一个条目有一些字段，另外的条目的没有。</span><br><span class="line"></span><br><span class="line">适合处理一般量级的数据（银行转账和钱）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Oracle，甲骨文公司的产品。 当前最流行应用最广泛的数据库软件。适合中大型，中大应用。</span><br><span class="line">SQL Server: 是微软公司的产品。window平台应用非常广泛。和c#，net平台兼容非常好。</span><br><span class="line">DB2： IBM公司的产品。</span><br><span class="line">MySQL: 开源组织的产品。甲骨文公司的产品。免费</span><br></pre></td></tr></table></figure>
+
+<h3 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">非关系数据库的（redis和MangDB）。</span><br><span class="line">为了处理海量数据，非关系数据库设计之初就是为了替代关系型数据库的</span><br><span class="line"></span><br><span class="line">优点：</span><br><span class="line">1.数据维护在缓存中，海量数据的增删改查和维护和处理非常轻松</span><br><span class="line">2.非关系型数据库简单易部署，基本都是开源软件</span><br><span class="line">3.非关系型数据库存储格式是key,value形式、文档形式、图片形式等等，所以可以存储基础类型以及对象或者是集合等各种格式，非常灵活</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">1.数据和数据没有关系，他们之间就是单独存在的</span><br><span class="line">2.数据维护在内存中，当有海量数据的时候会非常占内存，而内存的价格会比较高</span><br><span class="line"></span><br><span class="line">适合处理海量数据，保证效率，不一定安全（统计数据，例如微博数据）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">MongoDB</span><br><span class="line">Redis</span><br></pre></td></tr></table></figure>
+
+<h3 id="非关系型数据库的分类"><a href="#非关系型数据库的分类" class="headerlink" title="非关系型数据库的分类"></a>非关系型数据库的分类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">键值类数据库 ： Redis</span><br><span class="line"></span><br><span class="line">列存储数据库  :  HBase</span><br><span class="line"></span><br><span class="line">文档类数据库  : MongoDB</span><br><span class="line"></span><br><span class="line">图形数据库  : Graph</span><br></pre></td></tr></table></figure>
+
+<h3 id="mongoDB的介绍"><a href="#mongoDB的介绍" class="headerlink" title="mongoDB的介绍"></a>mongoDB的介绍</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MongoDB是一个高性能、开源、无模式的文档型数据库，设计用于提供高性能、水平可扩性、高可用性和高级可查询性，为Web应用提供可扩展的高性能数据存储解决方案。</span><br><span class="line"></span><br><span class="line">MongoDB的名称取自单词”humogous”中间的几个字符，是很大、巨大的意思。该数据库由10gen公司开发并提供技术支持，它属于NoSQL数据库家族中的一员，在许多场景下可以用来替代传统关系型数据库或key&#x2F;value存储方式。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">MongoDB的设计目标是高性能、可扩展、易部署、易使用，存储数据非常方便。其主要功能特性如下： </span><br><span class="line">(1) 面向集合存储，容易存储对象类型的数据。在MongoDB中数据被分组存储在集合中，集合类似RDBMS中的表，一个集合可以存储无限多的文档。 </span><br><span class="line">(2) 模式自由，采用无模式结构存储。在MongoDB里的集合中，存储的是无模式的文档，采用无模式存储数据是集合(Collection)区别于RDBMS中的表(Table)的一个重要特征。 </span><br><span class="line">(3) 支持完全索引，可以在任意属性上建立索引，包含内部对象。MongoDB的索引和RDBMS的索引基本一样，可以在指定属性、内部对象上创建索引以提高查询的速度。除此之外，MongoDB还可以提供创建基于地理空间的索引的能力。 </span><br><span class="line">(4) 支持查询。MongoDB支持丰富的查询操作，MongoDB几乎支持SQL中的大部分查询。 </span><br><span class="line">(5) 强大的聚合工具。MongoDB除了提供丰富的查询功能外，还提供强大的聚合工具，如count、group等，支持使用MapReduce完成复杂的聚合任务。 </span><br><span class="line">(6) 支持复制和数据恢复。MongoDB支持主从复制机制，可以实现数据备份、故障恢复、读扩展等功能。而基于副本集的复制机制提供了自动故障恢复的功能，确保了集群数据不会丢失。 </span><br><span class="line">(7) 使用高效的二进制数据存储，包括大型对象(如视频)。使用二进制格式存储，可以保存任何类型的数据对象。 </span><br><span class="line">(8) 自动处理分片，以支持云计算层次的扩展。MongoDB支持集群自动切分数据，对数据进行分片可以使集群存储更多的数据，实现更大的负载，也能保证存储的负载均衡。</span><br><span class="line">      https:&#x2F;&#x2F;cloud.tencent.com&#x2F;developer&#x2F;article&#x2F;1138683</span><br><span class="line">(9) 支持Perl、PHP、Java、C# 、JavaScript、Ruby、C和C++语言的驱动程序，Mon提供了当前所有主流开发语言的数据库驱动包，开发人员使用任何一种主流开发语言都可以轻松编程，实现访问MongoDB数据库。 </span><br><span class="line">(10) 文件存储格式为BSON(JSON的一种拓展)。BSON是二进制格式JSON的简称，BSON支持文档和数组的嵌套。 </span><br><span class="line">(11) 可以通过网络远程访问MongoDB数据库。</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1、安装mongodb数据库 下载链接</p>
+<p> 注意 安装时不要勾选安装图形化界面。</p>
+<p>2、安装NoSQLBooster for MongoDB</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>1、将mongodb安装目录下的bin路径，添加至系统环境变量path中</p>
+<p>2、在c盘根目录下新建data文件夹，在data文件夹中新建db文件夹</p>
+<h2 id="检测"><a href="#检测" class="headerlink" title="检测"></a>检测</h2><p>在cmd下键入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --version</span><br></pre></td></tr></table></figure>
+
+<p>若正确显示版本号，则安装配置成功</p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>1.启动MongoDB数据库 会默认使用C:/data/db作为数据存储目录，所以在使用mongod命令之前需要先在c盘中新建一个data目录，在data目录下新建db目录，才能启动成功</p>
+<p>在cmd下键入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod &#x2F;&#x2F;启动数据库</span><br></pre></td></tr></table></figure>
+
+<p>在cmd下键入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mongod --datapath&#x3D;数据存储目录    &#x2F;&#x2F;修改mongoDB默认数据存储目录</span><br><span class="line">mongod –dbpath 数据存储目录  &#x2F;&#x2F;启动</span><br></pre></td></tr></table></figure>
+
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>在cmd下键入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mongo   &#x2F;&#x2F;链接数据库</span><br><span class="line">exit    &#x2F;&#x2F;断开链接</span><br></pre></td></tr></table></figure>
+
+<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><p>在cmd下按下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl + c</span><br></pre></td></tr></table></figure>
+
+<h2 id="mongo数据库操作"><a href="#mongo数据库操作" class="headerlink" title="mongo数据库操作"></a>mongo数据库操作</h2><h3 id="NoSQLBooster中mongode使用"><a href="#NoSQLBooster中mongode使用" class="headerlink" title="NoSQLBooster中mongode使用"></a>NoSQLBooster中mongode使用</h3><p>才使用mongo之前先给出常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">show dbs        &#x2F;&#x2F;显示所有的数据库</span><br><span class="line">use library       &#x2F;&#x2F;使用某个数据库</span><br><span class="line">db                 &#x2F;&#x2F;显示当前使用的数据库</span><br><span class="line">&#x2F;&#x2F;向library中的books集合中插入一条数据 (虽然一开始没有library仓库和books集合，但是不妨碍我们使用)</span><br><span class="line">db.books.insertOne(&#123;&quot;name&quot;:&quot;tom&quot;&#125;)    </span><br><span class="line">show  collections    &#x2F;&#x2F;显示当前library仓库下的所有集合</span><br><span class="line">db.books.find()   &#x2F;&#x2F;显示igeek仓库下的books集合中的所有数据</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;再插入一条数据</span><br><span class="line">db.books.insertOne(&#123;&quot;name&quot;:&quot;kitty&quot;,&quot;age&quot;:18&#125;)</span><br><span class="line">db.books.find()  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;删除数据库</span><br><span class="line">db.dropDatabase()</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;在当前数据库下创建集合</span><br><span class="line">db.createCollection(&quot;igeek&quot;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;删除当前仓库下的igeek集合</span><br><span class="line">db.igeek.drop()</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;插入文档</span><br><span class="line">db.igeek.insert(&#123;name:&quot;hello&quot;&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;删除指定的文档数据</span><br><span class="line">db.igeek.remove(&#123;&#39;name&#39;:&#39;hello&#39;&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;更新文档数据</span><br><span class="line">db.igeek.update(</span><br><span class="line">    &#123;name:&quot;hello&quot;&#125;,</span><br><span class="line">    &#123;$set:&#123;name:&quot;xxx&quot;&#125;&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">        &#x2F;&#x2F;upsert:true 如果要更新的文档不存在会插入一条新的记录</span><br><span class="line">        upsert:true,</span><br><span class="line">        multi:true</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;根据id更新数据</span><br><span class="line">&#x2F;&#x2F;save方法有更新和插入两种功能，到底是插入还是更新文档取决于save的参数。</span><br><span class="line">db.igeek.save(&#123;</span><br><span class="line">    &quot;_id&quot; : ObjectId(&quot;5c09f5deaf853bfb8a003425&quot;),</span><br><span class="line">    &quot;name&quot; : &quot;kkk&quot;,</span><br><span class="line">    &quot;tags&quot; : [</span><br><span class="line">            &quot;mongodb&quot;,</span><br><span class="line">            &quot;NoSQL&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;likes&quot; : 110</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p> <strong>新建链接</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开NoSQLBooster for MongoDB --&gt; connect --&gt; create --&gt; save &amp; connect</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://howlcn1997.github.io/2019/03/16/MongoDB/%E5%BB%BA%E7%AB%8B%E9%93%BE%E6%8E%A5.png" alt="建立链接"></p>
+<p><strong>创建一个数据库并写入一条文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use library  &#x2F;&#x2F;指定使用library数据库  此时db关键字就代表library了</span><br><span class="line">db.books.insertOne(&#123;&quot;name&quot;:&quot;红楼梦&quot;&#125;)  &#x2F;&#x2F;向library数据库中的books集合新增一条数据</span><br></pre></td></tr></table></figure>
+
+<p><strong>通过NoSQLBooster for MongoDB将文件内容写入数据库</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1.在桌面创建这个文件，JSON和JSON之间没有逗号：</span><br><span class="line">&#123;&quot;uname&quot;:&quot;李灵黛&quot;,&quot;age&quot;:12,&quot;sex&quot;:&quot;男&quot;,&quot;provice&quot;:&quot;上海&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;柳辰飞&quot;,&quot;age&quot;:13,&quot;sex&quot;:&quot;女&quot;,&quot;provice&quot;:&quot;北京&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;江城子&quot;,&quot;age&quot;:17,&quot;sex&quot;:&quot;男&quot;,&quot;provice&quot;:&quot;广东&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;萧合凰&quot;,&quot;age&quot;:37,&quot;sex&quot;:&quot;女&quot;,&quot;provice&quot;:&quot;河北&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;西粼宿&quot;,&quot;age&quot;:16,&quot;sex&quot;:&quot;男&quot;,&quot;provice&quot;:&quot;广东&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;千湄&quot;,&quot;age&quot;:13,&quot;sex&quot;:&quot;女&quot;,&quot;provice&quot;:&quot;广东&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;林墨瞳&quot;,&quot;age&quot;:13,&quot;sex&quot;:&quot;女&quot;,&quot;provice&quot;:&quot;吉林&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;柳婵诗&quot;,&quot;age&quot;:14,&quot;sex&quot;:&quot;女&quot;,&quot;provice&quot;:&quot;河北&quot;&#125;</span><br><span class="line">&#123;&quot;uname&quot;:&quot;李念儿&quot;,&quot;age&quot;:19,&quot;sex&quot;:&quot;女&quot;,&quot;provice&quot;:&quot;广东&quot;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2.运行命令导入数据</span><br><span class="line">$ mongoimport -d 仓库名 -c 集合名 C:\Users\Danny\Desktop\1.txt</span><br><span class="line"></span><br><span class="line">-d参数表示需要往哪个数据库中导入数据</span><br><span class="line">-c 参数表示需要往哪个集合(表)中导入数据</span><br></pre></td></tr></table></figure>
+
+<p>在NoSQLBooster for MongoDB中输入命令可以对数据库进行操作，此处不加赘述，仅介绍通过node如何对数据库进行增删改查操作</p>
+<h3 id="node中mongo的使用"><a href="#node中mongo的使用" class="headerlink" title="node中mongo的使用"></a>node中mongo的使用</h3><p> node中对mongo数据库的操作需要用到 mongoose包</p>
+<p> mongoose关于Model给出的关于操作数据的常用API</p>
+<p>首先要创建Model对象，如obb,具体创建过程，下文有述</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;增 将obb数据对象添加到集合中</span><br><span class="line">obb.save().then(function(data)&#123;</span><br><span class="line">	&#x2F;&#x2F;回调刚刚保存的数据对象</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;当一个页面发出post保存表单数据到数据库中时的操作</span><br><span class="line">router.post(&#39;&#x2F;add&#39;,(req,res)&#x3D;&gt;&#123;</span><br><span class="line">    &#x2F;&#x2F;添加id</span><br><span class="line">    req.body._id &#x3D; mongoose.Types.ObjectId();</span><br><span class="line">    &#x2F;&#x2F;声明一个Student Model</span><br><span class="line">    let stu &#x3D; new Student();</span><br><span class="line">    &#x2F;&#x2F;将表单数据浅拷贝到stu Model对象中</span><br><span class="line">    Object.assign(stu,req.body);</span><br><span class="line">    &#x2F;&#x2F;保存</span><br><span class="line">    stu.save().then(function()&#123;</span><br><span class="line">        res.redirect(&#39;&#x2F;student&#x2F;studentList&#39;);</span><br><span class="line">    &#125;,function(err)&#123;</span><br><span class="line">        res.render(&#39;studentAdd.html&#39;,&#123;err_msg:err.message&#125;)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;删</span><br><span class="line">Book.remove(&#123;name:&quot;红楼梦&quot;&#125;).then(function(msg)&#123;</span><br><span class="line">	&#x2F;&#x2F;回调刚刚删除的数据对象</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;改</span><br><span class="line">&#x2F;&#x2F;new 默认为false 返回修改之前的数据     true返回修改之后的数据</span><br><span class="line">Book.findByIdAndUpdata(_id,&#123;要加入数据库的对象&#125;,&#123;new:true&#125;).then(function(data)&#123;&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;查</span><br><span class="line">Book.find();&#x2F;&#x2F;查询所有数据</span><br><span class="line">&#x2F;&#x2F;Book.find().then(function(data)&#123;&#125;);&#x2F;&#x2F;中返回的data是封装过的对象，我们要的数据其实是data._doc</span><br><span class="line">Book.find(&#123; name: &#39;红楼梦&#39;, price: &#123; $gte: 20 &#125;&#125;); &#x2F;&#x2F;加入查询条件  与</span><br><span class="line">Book.find(&#123;$or:[&#123;name:&#39;三国演义&#39;&#125;,&#123;price:&#123;$gte:20&#125;&#125;]); &#x2F;&#x2F;加入查询条件  或</span><br><span class="line">Book.findOne(条件);          </span><br><span class="line">Book.findById();</span><br></pre></td></tr></table></figure>
+
+<h4 id="1、新建node项目（文件夹）"><a href="#1、新建node项目（文件夹）" class="headerlink" title="1、新建node项目（文件夹）"></a>1、新建node项目（文件夹）</h4><h4 id="2、在项目中安装第三方包-mongoose"><a href="#2、在项目中安装第三方包-mongoose" class="headerlink" title="2、在项目中安装第三方包 mongoose"></a>2、在项目中安装第三方包 mongoose</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br><span class="line">npm install mongoose</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-新建js文件（如server-js）"><a href="#3-新建js文件（如server-js）" class="headerlink" title="3.新建js文件（如server.js）"></a>3.新建js文件（如server.js）</h4><h5 id="1）引入mongoose"><a href="#1）引入mongoose" class="headerlink" title="1）引入mongoose"></a>1）引入mongoose</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const mongoose &#x3D; require(&#39;mongoose&#39;)；</span><br></pre></td></tr></table></figure>
+
+<h5 id="2）建立连接"><a href="#2）建立连接" class="headerlink" title="2）建立连接"></a>2）建立连接</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;mongoose.connect(&#39;mongodb:&#x2F;&#x2F;域名&#x2F;数据库名&#39;, &#123;useNewUrlParser: true&#125;);</span><br><span class="line">mongoose.connect(&#39;mongodb:&#x2F;&#x2F;localhost:27017&#x2F;library&#39;, &#123;useNewUrlParser: true&#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="3）连接对象的回调"><a href="#3）连接对象的回调" class="headerlink" title="3）连接对象的回调"></a>3）连接对象的回调</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var db &#x3D; mongoose.connection;&#x2F;&#x2F;拿到链接对象</span><br><span class="line">db.on(&#39;error&#39;, console.error.bind(console, &#39;connection error:&#39;));&#x2F;&#x2F;</span><br><span class="line">db.once(&#39;open&#39;, function() &#123;</span><br><span class="line">  &#x2F;&#x2F; we&#39;re connected!</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-创建一个schema"><a href="#4-创建一个schema" class="headerlink" title="4)创建一个schema"></a>4)创建一个schema</h5><p>这个schema是与数据库中表的schema是一一对应的</p>
+<p><strong>这种机制是ORM object relational model 对象关系映射模型</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var bookSchema &#x3D; new mongoose.Schema(&#123;</span><br><span class="line">  name: String</span><br><span class="line">  &#x2F;&#x2F;是否全部借出</span><br><span class="line">   isLendAll: Boolean</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>schema数据类型除了String类型 还有以下几种</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">• String</span><br><span class="line">• Number</span><br><span class="line">• Date</span><br><span class="line">• Boolean</span><br><span class="line">• Buffer   &#x2F;&#x2F;流，音频 视频等文件可以由此保存</span><br><span class="line">• ObjectId  &#x2F;&#x2F; 使用  mongoose.Schema.Types.ObjectId</span><br><span class="line">• Mixed   &#x2F;&#x2F;混合数据格式  使用  mongoose.Schema.Types.Mixed</span><br><span class="line">• Array</span><br></pre></td></tr></table></figure>
+
+<p>schema数据字段中还可以更细化的限制其取值，例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var bookSchema &#x3D; new mongoose.Schema(&#123;</span><br><span class="line">    name: &#123;</span><br><span class="line">        type: String,</span><br><span class="line">        minlength: 1,&#x2F;&#x2F;规定字符串最小长度</span><br><span class="line">        maxlenght:10 &#x2F;&#x2F;规定字符串最大长度</span><br><span class="line">        match:   &#x2F;&#x2F;限定字符串格式，正则表达式</span><br><span class="line">    &#125;String</span><br><span class="line">    price: &#123;</span><br><span class="line">    type: Number,</span><br><span class="line">    min: 0, &#x2F;&#x2F;限定最小值</span><br><span class="line">    max: 100 &#x2F;&#x2F;限定最大值</span><br><span class="line">&#125;</span><br><span class="line">    &#x2F;&#x2F;是否全部借出</span><br><span class="line">    isLendAll:&#123;</span><br><span class="line">    type: Boolean,</span><br><span class="line">    enum: [0,1],  &#x2F;&#x2F;枚举 用数据限定isLendAll可以取到的值</span><br><span class="line">    default: 0   &#x2F;&#x2F;默认值</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-新建一个model对象"><a href="#5-新建一个model对象" class="headerlink" title="5)新建一个model对象"></a>5)新建一个model对象</h5><p>此时 Book对象 与 数据库中books集合形成一一对应关系，对Book的操作，便是对集合books的操作，接下来的操作都是建立在此基础上的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var Book &#x3D; mongoose.model(&#39;book&#39;, bookSchema); &#x2F;&#x2F;注意此处创建对象时，model中入参 &#39;book&#39; 时，那么数据库中对应的集合应该以 books 命名，不然无法对响应表进行操作</span><br></pre></td></tr></table></figure>
+
+<h5 id="查询一条数据"><a href="#查询一条数据" class="headerlink" title="查询一条数据"></a>查询一条数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Book.find(&#123;name: &#39;红楼梦&#39;&#125;,function(err,arr)&#123;  </span><br><span class="line">    if(err)&#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        console.log(arr);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F;打印结果 [ &#123; _id: 5cf3c3f19cad171ee8e202ca, name: &#39;红楼梦&#39; &#125; ]</span><br><span class="line">&#x2F;&#x2F;是一个数组  就算只有一条数据 最后得到的数据也是数组</span><br></pre></td></tr></table></figure>
+
+<h5 id="新增数据"><a href="#新增数据" class="headerlink" title="新增数据"></a>新增数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/12/08/React-%E7%9A%847%E4%B8%AD%E6%80%AA%E5%BC%82%E4%BB%A3%E7%A0%81/" style="float: left;">
+        ← React 的7中怪异代码
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/11/23/vue%E4%B8%AD%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%ACview%E5%8D%B4%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+        vue中路由跳转view却不更新的问题与解决办法 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>前端性能优化及兼容问题 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-06-15T04:20:32.000Z" itemprop="datePublished">
+          2020-06-15
+      </time>
+    
+</span>
+                <h1>前端性能优化及兼容问题</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h2><h3 id="减少http请求数量和体积"><a href="#减少http请求数量和体积" class="headerlink" title="减少http请求数量和体积"></a>减少http请求数量和体积</h3><p> -压缩 css、js 文件<br>-合并 js、css 文件，减少 http 请求<br>-使用CSS Sprites图，合并多个CSS图片，合理使用图片压缩<br>-合理使用http缓存，减少http请求<br>-使用外部的css和js以减少服务器的压力</p>
+<h3 id="css和script的位置"><a href="#css和script的位置" class="headerlink" title="css和script的位置"></a>css和script的位置</h3><p> 把 css 样式引入放在<code>&lt;head&gt;</code>标签中，把 <code>&lt;script&gt;</code>资源引入放在<code>&lt;/body&gt;</code>闭合之前。<br>外链脚本在加载时却常常阻塞其他资源，例如在脚本加载完成之前，它后面的图片、样式以及其他脚本都处于阻塞状态，直到脚本加载完成后才会开始加载。如果将脚本放在比较靠前的位置，则会影响整个页面的加载速度从而影响用户体验。所以说尽可能的将脚本往后挪，减少对并发下载的影响</p>
+<h3 id="DOM操作优化"><a href="#DOM操作优化" class="headerlink" title="DOM操作优化"></a>DOM操作优化</h3><p> -要避免在document上直接进行频繁的DOM操作(用innerHTML代替DOM操作)，缓存DOM节点查找的结果<br>-使用classname代替大量的内联样式修改<br>-对于复杂的UI元素，设置position为absolute或fixed<br>-在js动画和css动画之间尽量使用css动画<br>-适当使用canvas<br>-使用事件代理<br>-避免使用eval或Function，每次 eval 或 Function 构造函数作用于字符串表示的源代码时，脚本引擎都需要将源代码转换成可执行代码，这是很消耗资源的操作<br>-避免大量的字符串拼接，可以使用数组的join方法</p>
+<h3 id="CSS选择符优化"><a href="#CSS选择符优化" class="headerlink" title="CSS选择符优化"></a>CSS选择符优化</h3><p> -避免使用通配符选择器，避免使用后代选择器<br>-选择器匹配是从右向左匹配的，选择器语句链越短，浏览器的匹配速度越快<br>-避免使用标签和通用选择器作为关键选择器，因为它们会匹配大量的元素，浏览器必须要进行大量的工作<br>-搞清楚哪些 CSS 属性会触发重新布局（reflow）、重绘（repaint）。在写样式时，避免触发重新布局的可能<br>-减少使用昂贵的属性，所有需要浏览器进行操作或计算的属性相对而言都需要花费更大的代价。box-shadow/border-radius/filter/透明度/:nth-child等<br>-不要使用@import<br>-尽量减少css表达式的使用 background-color: expression((new Date()).getHours()%2?”#FFFFFF”: “#000000” );</p>
+<h2 id="HTML常见兼容性问题"><a href="#HTML常见兼容性问题" class="headerlink" title="HTML常见兼容性问题"></a>HTML常见兼容性问题</h2><h3 id="IE不支持h5新标签和c3媒体查询的问题"><a href="#IE不支持h5新标签和c3媒体查询的问题" class="headerlink" title="IE不支持h5新标签和c3媒体查询的问题"></a>IE不支持h5新标签和c3媒体查询的问题</h3><p>引入html5shiv.js在IE浏览器下创建h5标签<br>引入respond.js让IE浏览器支持C3的媒体查询</p>
+<h3 id="js代码兼容性问题"><a href="#js代码兼容性问题" class="headerlink" title="js代码兼容性问题"></a>js代码兼容性问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">根据兼容需求选择技术框架&#x2F;库(jquery)</span><br><span class="line"></span><br><span class="line">var ev &#x3D; ev || window.event</span><br><span class="line">document.documentElement.clientWidth || document.body.clientWidth</span><br><span class="line">var target &#x3D; ev.srcElement||ev.target</span><br></pre></td></tr></table></figure>
+
+<h3 id="css兼容性问题"><a href="#css兼容性问题" class="headerlink" title="css兼容性问题"></a>css兼容性问题</h3><p>A.使用Reset CSS或Normalize.css做样式的重置<br>B.使用autoprefixer添加浏览器前缀<br>C.使用条件注释针对不同的浏览器引入单独的样式表<br>D.使用已经处理好兼容问题的库，比如BootStrap<br>E.渐进增强(progressive enhancement): 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验<br>F.优雅降级 (graceful degradation): Web站点在所有新式浏览器中都能正常工作，然后再针对低版本浏览器进行兼容。<br>G.使用CSS hack技术做样式兼容</p>
+<h3 id="常见的兼容性问题"><a href="#常见的兼容性问题" class="headerlink" title="常见的兼容性问题"></a>常见的兼容性问题</h3><p>display:inline-block（IE7及以下不支持）<br>需要对低版本IE特殊处理：{display:inline-block;display:inline;zoom:1;}</p>
+<p>display:inline-block 什么时候会显示间隙？怎样消除间隙？<br>父元素font-size设置成0，子元素重新设置font-size</p>
+<p>display:inline-block滥用容易出现布局方面的问题，尤其在左中右、左右等布局方面的问题尤为突出。因此如果是左右布局的话，尽量都用浮动来代替</p>
+<p>z-index在IE7及以下版本的话，有时会发现不是谁z-index设置的越高谁就显示在最上面。碰到这种问题需要设置父元素有相对定位属性元素的z-index。先比较父元素的z-index再比较子元素的</p>
+<p>IE6双边距：IE6中，元素向左浮动并且设置了左侧的外边距出现了这样的双边距bug。同理，元素向右浮动并且设置右边距也会出现同样的情况。同一行如果有多个浮动元素，第一个浮动元素会出现这个双边距bug，其它的浮动元素则不会。只需要给浮动元素加上display:inline;这样的CSS属性就可以了。</p>
+<p>margin-top，margin-bottom的bug<br>父元素的第一个子元素设置了margin-top,会作用于父元素（值为父元素的margin-top与该margin-top两者中的最大值)，而子元素和父元素的边距则没有发生变化。</p>
+<p>超链接访问之后hover样式不出现了，被点击后也不具有active和hover样式。<br>方法：按照顺序写 ：a:link{ } a:visited{ } a:hover{ } a:active{ }</p>
+<p>IE没有办法定义1像素左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08;line-height:1px）</p>
+<p>IE5-8不支持opacity<br>方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.opacity&#123;</span><br><span class="line">    opacity:0.4,</span><br><span class="line">    filter:alpha(opacity&#x3D;60);</span><br><span class="line">    -ms-filter:&quot;progid:DXImageTransform.Microsoft.Alpha(Opacity&#x3D;60)&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>IE6不支持PNG透明管背景色，IE6下使用gif图片,png24的图片在ie6浏览器上显示背景色，做成png8的</p>
+<p>IE下even对象只有x,y属性，但是没有pagex和pagey属性，火狐只有pagex pagey属性。</p>
+<p>谷歌下默认会将小于12px的文本设置按照12px显示，可是通过加入-webkit-text-size-adjust:none;</p>
+<h2 id="附录：重排和重绘的操作"><a href="#附录：重排和重绘的操作" class="headerlink" title="附录：重排和重绘的操作"></a>附录：重排和重绘的操作</h2><h3 id="重排的操作"><a href="#重排的操作" class="headerlink" title="重排的操作"></a>重排的操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">width	height	padding	margin</span><br><span class="line">display	border-width	border	top</span><br><span class="line">position	font-size	float	text-align</span><br><span class="line">overflow-y	font-weight	overflow	left</span><br><span class="line">font-family	line-height	vertical-align	right</span><br><span class="line">clear	white-space	bottom	min-height</span><br><span class="line">offsetTop  offsetLeft  offsetWidth   offsetHeight</span><br><span class="line">scrollTop   scrollLeft  scrollWidth   scrollHeight</span><br><span class="line">clientTop   clientLeft   clientWidth  clientHeight </span><br><span class="line">getComputedStyle()    (currentStyle in IE)</span><br></pre></td></tr></table></figure>
+
+<h3 id="重绘的操作"><a href="#重绘的操作" class="headerlink" title="重绘的操作"></a>重绘的操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	color	border-style	visibility	background</span><br><span class="line">text-decoration	background-image	background-position	background-repeat</span><br><span class="line">outline-color	outline	outline-style	border-radius</span><br><span class="line">outline-width	box-shadow	background-size</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/07/02/Hello%20React/" style="float: left;">
+        ← Hello React
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/06/08/Vuex%E7%9A%84%E8%AF%A6%E8%A7%A3/">
+        Vuex的详解 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
