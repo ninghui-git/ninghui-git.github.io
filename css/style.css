@@ -1,0 +1,351 @@
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url("http://themes.googleusercontent.com/static/fonts/vollkorn/v4/BCFBp4rt5gxxFrX6F12DKvesZW2xOQ-xsNqO47m55DA.woff") format('woff');
+}
+@font-face {
+  font-family: 'JosefinSansRegular';
+  src: url("font/josefinsans-regular-webfont.eot");
+  src: url("font/josefinsans-regular-webfont.eot?#iefix") format('embedded-opentype'), url("font/josefinsans-regular-webfont.woff") format('woff'), url("font/josefinsans-regular-webfont.ttf") format('truetype'), url("font/josefinsans-regular-webfont.svg#JosefinSansRegular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Helvetica', '微软雅黑', '黑体', '宋体', serif;
+  color: #3a4145;
+}
+a {
+  transition: color ease 0.3s;
+}
+blockquote {
+  font-size: 12px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  font-weight: bold;
+}
+#toc {
+  float: right;
+  margin-left: 10px;
+}
+#toc ol {
+  list-style: none;
+  list-style-position: inside;
+  padding: 0;
+  padding-left: 15px;
+}
+#toc a {
+  text-decoration: none;
+}
+.article-content pre,
+.article-content .highlight {
+  background: #1d1f21;
+  margin: 0.5em 0;
+  padding: 1em 2%;
+  overflow: auto;
+  color: #c5c8c6;
+  line-height: line-height;
+  font-size: font-size;
+}
+.article-content .highlight .gutter pre,
+.article-content .gist .gist-file .gist-data .line-numbers {
+  color: #666;
+  font-size: 0.85em;
+  line-height: line-height;
+  font-size: font-size;
+}
+.article-content pre {
+  font-family: font-mono;
+}
+.article-content pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0;
+}
+.article-content .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.article-content .highlight table {
+  margin: 0;
+  width: auto;
+}
+.article-content .highlight td {
+  border: none;
+  padding: 0;
+}
+.article-content .highlight figcaption {
+  font-size: 0.85em;
+  text-align: left;
+  color: #969896;
+  line-height: 1em;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
+}
+.article-content .highlight figcaption a {
+  float: right;
+}
+.article-content .highlight .gutter pre {
+  text-align: right;
+  padding-right: 1.5em;
+}
+.article-content .gist {
+  margin: 0.5em 0;
+  background: #1d1f21;
+  padding: 1em 2%;
+}
+.article-content .gist .gist-file {
+  border: none;
+  font-family: font-mono;
+  margin: 0;
+}
+.article-content .gist .gist-file .gist-data {
+  background: none;
+  border: none;
+}
+.article-content .gist .gist-file .gist-data .line-numbers {
+  background: none;
+  border: none;
+  padding: 0 1.5em 0 0;
+}
+.article-content .gist .gist-file .gist-data .line-data {
+  padding: 0 !important;
+}
+.article-content .gist .gist-file .highlight {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.article-content .gist .gist-file .gist-meta {
+  background: #1d1f21;
+  color: #969896;
+  font: 0.85em font-serif;
+  padding: 0;
+  margin-top: 1em;
+  text-shadow: none;
+}
+.article-content .gist .gist-file .gist-meta a {
+  color: color-blue;
+  font-weight: normal;
+}
+.article-content .gist .gist-file .gist-meta a:hover {
+  color: color-theme;
+}
+pre .comment {
+  color: #969896;
+}
+pre .title,
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .tag .title,
+pre .pi,
+pre .doctype,
+pre .id,
+pre .class,
+pre .pseudo {
+  color: #c66;
+}
+pre .number,
+pre .preprocessor,
+pre .pragma,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #de935f;
+}
+pre .class .title,
+pre .rules .attribute {
+  color: #f0c674;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .symbol,
+pre .cdata {
+  color: #b5bd68;
+}
+pre .css .hexcolor {
+  color: #8abeb7;
+}
+pre .function,
+pre .function .title,
+pre .decorator,
+pre .python .title,
+pre .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #81a2be;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #b294bb;
+}
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .cdata {
+  opacity: 0.5;
+}
+nav {
+  opacity: 0.8;
+  text-shadow: -1px 0px 0px rgba(0,0,0,0.75);
+}
+.first-post {
+  margin-top: 70px;
+}
+.last-post {
+  margin-bottom: 125px;
+}
+.pagination-div {
+  margin-bottom: 125px;
+  opacity: 0.8;
+  text-align: center;
+  overflow: hidden;
+}
+.pagination-div .page-number {
+  display: inline-block;
+}
+.pagination-div span {
+  color: #f03;
+}
+.pagination-div a {
+  color: #ff7800;
+}
+.pagination-div span,
+.pagination-div a {
+  padding: 0.5em 1em;
+}
+.pagination-div .prev {
+  float: left;
+}
+.pagination-div .next {
+  float: right;
+}
+.post {
+  opacity: 0.9;
+  font-family: 'JosefinSansRegular', 'Vollkorn', Georgia, "Times New Roman", Times, "Kai", "Kaiti SC", "KaiTi", "BiauKai", "楷体", "楷体_GB2312", serif;
+}
+.post h1 {
+  font-weight: bold;
+}
+.post h1 a {
+  color: #333;
+}
+.post h1 a:hover {
+  text-decoration: none;
+  color: #f03;
+}
+.index-post-avatar {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  top: -2px;
+}
+.say-title {
+  text-align: right;
+}
+.say-title a {
+  color: #ff7800;
+}
+.say-title a:hover {
+  color: #f03;
+}
+.post-body a {
+  color: #ff7800;
+}
+.post-body a:hover {
+  color: #f03;
+}
+.time-info {
+  text-align: right;
+  border-bottom: 1px dotted #e4e4e4;
+  margin-bottom: 15px;
+}
+.highlight {
+  background: #1d1f21;
+  margin: 0.5em 0;
+  padding: 1em 2%;
+  overflow: auto;
+  color: #c5c8c6;
+  line-height: line-height;
+  font-size: font-size;
+  border-radius: 4px;
+}
+.highlight table {
+  padding: 0;
+}
+.highlight pre {
+  background: none;
+  border: none;
+  color: #c5c8c6;
+  padding: 5px;
+  margin: 0;
+}
+.highlight .gutter pre {
+  color: #666;
+}
+.archive-body {
+  margin-top: 70px;
+  margin-bottom: 125px;
+  opacity: 0.8;
+}
+.archive-body a {
+  color: #ff7800;
+}
+.archive-body a:hover {
+  color: #f03;
+}
+.archive-list {
+  list-style-position: inside;
+  padding: 0;
+}
+.archive-list-count {
+  margin-left: 10px;
+}
+.archive-body .post {
+  opacity: 1;
+}
+a.currentTag {
+  color: #f03;
+}
+footer {
+  background: rgba(0,0,0,0.5);
+  background: #000 9;
+  margin: 50px auto 0 auto;
+  font-family: arial;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+#bottom-tip {
+  padding: 18px 0 15px 0;
+}
+::selection {
+  color: #222;
+  background: #d6edff;
+  text-shadow: none;
+}
