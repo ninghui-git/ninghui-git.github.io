@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,217 +167,89 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/07/15/简述Js中的原型与原型链/">简述Js中的原型与原型链</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-07-15T09:29:29.000Z" itemprop="datePublished">
-          2020-07-15
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-03-10T14:42:05.680Z" itemprop="datePublished">
+          2021-03-10
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1、原型 Javascript是基于对象的编程语言，他其中也含有部分封装、继承的概念，而原型概念便是基于继承的。
- 函数的原型类似于面向对象语言中子类的父类，而函数本身类似于子类。函数继承了函数原型中的属性和方法，即函数本身可以调用它原型中的属性和方法。
- 知识点：若有函数Person，则它的函数原型为Person.prototype，函数原型本身是个对象。
-12345678910111213141516function Person 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/07/15/简述Js中的原型与原型链/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1></h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/07/02/Hello React/">Hello React</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-07-02T05:24:49.000Z" itemprop="datePublished">
-          2020-07-02
-      </time>
+        <div class="col-md-8 col-md-offset-2">
+      		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 我的第一篇博客</span><br><span class="line">date: 2020-01-22 17:17:58</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        前言至今一直在使用公司的脚手架或者create-react-app来构建React项目，使用的时间越长，就对于这种理所当然感到疑惑，遂决定利用webpack手动构建一个react项目。
-简述webpack
-本质上，webpack 是一个现代 JavaScript 应用程序的*静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)*，其中包含应用
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/07/02/Hello React/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/06/15/前端性能优化及兼容问题/">前端性能优化及兼容问题</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-06-15T04:20:32.000Z" itemprop="datePublished">
-          2020-06-15
-      </time>
     
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        前端性能优化减少http请求数量和体积 -压缩 css、js 文件-合并 js、css 文件，减少 http 请求-使用CSS Sprites图，合并多个CSS图片，合理使用图片压缩-合理使用http缓存，减少http请求-使用外部的css和js以减少服务器的压力
-css和script的位置 把 css 样式引入放在&lt;head&gt;标签中，把 &lt;script&gt;资源引入放在&lt;/body&gt;闭合之前。外链脚本在
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/06/15/前端性能优化及兼容问题/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/06/08/Vuex的详解/">Vuex的详解</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-06-08T09:17:58.000Z" itemprop="datePublished">
-          2020-06-08
-      </time>
+    <a class="pull-right" href="/2021/03/10/hello-world/">
+        Hello World →
+    </a>
     
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        什么情况下应该使用 Vuex？Vuex 可以帮助我们管理共享状态，并附带了更多的概念和框架。这需要对短期和长期效益进行权衡。
-如果不打算开发大型单页应用，应用够简单，最好不要使用 Vuex。一个简单的store模式就足够了。但是，如果需要构建一个中大型单页应用，就要考虑如何更好地在组件外部管理状态，Vuex 是不错的选择。
-使用在 Vue 的单页面应用中使用，需要使用Vue.use(Vuex)调用插件。将其注入到Vue根实例中。
-123
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/06/08/Vuex的详解/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/05/21/前端Http协议缓存/">前端Http协议缓存</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-05-21T07:15:51.000Z" itemprop="datePublished">
-          2020-05-21
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        简介用户获取网络资源，需要通过非常长的网络去服务器上请求资源,另外服务端为了应对大量的用户请求而不断的提升硬件性能与带宽。这对用户与服务端都非常的不友好。而缓存就是为了解决用户请求速度与释放服务器压力而生的。
-缓存的判断规则过期机制过期机制就是浏览器根据缓存的有效期进行判断，如果在有效期内就使用缓存，否则就抛弃这个缓存。
-一个缓存副本必须满足以下条件，浏览器会认为它是有效的，足够新的：
-　　　　1. 含有完整的过期时间控制头信息（HTT
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/05/21/前端Http协议缓存/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <nav class="pagination" role="pagination">
-          <a class="pull-left" href="/">← Newer Posts</a>
-          
-        </nav>
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
 
       
 <!-- ============================ Footer =========================== -->
