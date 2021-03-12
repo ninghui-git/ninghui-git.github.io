@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>ES6结构赋值 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-01-12T03:01:36.000Z" itemprop="datePublished">
+          2020-01-12
+      </time>
+    
+</span>
+                <h1>ES6结构赋值</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="ES6结构赋值"><a href="#ES6结构赋值" class="headerlink" title="ES6结构赋值"></a>ES6结构赋值</h3><p>ES6解构：es6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称之为解构</p>
+<h3 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a><strong>数组的解构赋值</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c] &#x3D; [1,2,3];</span><br><span class="line">console.log(a);&#x2F;&#x2F;1</span><br><span class="line">console.log(b);&#x2F;&#x2F;2</span><br><span class="line">console.log(c);&#x2F;&#x2F;3</span><br><span class="line">&#x2F;&#x2F;本质上这种写法属于‘模式匹配‘，只要等号两边的模式相同，左边的变量就会被赋予对应的值</span><br><span class="line">let [foo,[bar]] &#x3D; [&quot;111&quot;,[&quot;abc&quot;]];</span><br><span class="line">console.log(bar); &#x2F;&#x2F;abc</span><br><span class="line"></span><br><span class="line">let [, ,third] &#x3D; [&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;];</span><br><span class="line">console.log(third); &#x2F;&#x2F;baz</span><br><span class="line"></span><br><span class="line">let [x,y,z] &#x3D; [&#39;hah&#39;];</span><br><span class="line">console.log(y); &#x2F;&#x2F;undefined</span><br><span class="line">&#x2F;&#x2F;如果解构不成功，变量的值就等于undefined</span><br></pre></td></tr></table></figure>
+
+<p>解构一般有三种情况，完全解构，不完全解构，解构不成功,在上述例子中存在完全解构和解构不成功的例子，下面来看一下不完全解构的例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">let [x,y] &#x3D; [1,2,3];</span><br><span class="line">console.log(x); &#x2F;&#x2F;1</span><br><span class="line">console.log(y); &#x2F;&#x2F;2</span><br><span class="line">let [a,[b],d] &#x3D; [1,[2,3],4];</span><br><span class="line">console.log(a); &#x2F;&#x2F;1</span><br><span class="line">console.log(b); &#x2F;&#x2F;2</span><br><span class="line">console.log(d); &#x2F;&#x2F;4</span><br><span class="line">&#x2F;&#x2F;不完全解构：即等号左边的模式，只匹配一部分的等号右边的数组，这种情况下解构依然成功</span><br><span class="line">&#x2F;&#x2F;如果等号的右边不是数组，或者说不是可遍历的结构，那么将会报错</span><br><span class="line">let [a] &#x3D; 1;</span><br><span class="line">let [b] &#x3D; false;</span><br><span class="line">let [c] &#x3D; NaN;</span><br><span class="line">let [d] &#x3D; undefined;</span><br><span class="line">let [e] &#x3D; null;</span><br><span class="line">let [f] &#x3D; &#123;&#125;;</span><br><span class="line">&#x2F;&#x2F;上面的语句都会报错：Uncaught TypeError: 1 is not iterable</span><br></pre></td></tr></table></figure>
+
+<h3 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a><strong>默认值</strong></h3><p>解构赋值允许指定默认值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let [x,y&#x3D;&#39;b&#39;] &#x3D; [&#39;a&#39;];</span><br><span class="line">console.log(y); &#x2F;&#x2F;b</span><br><span class="line"></span><br><span class="line">let [x,y &#x3D; &#39;b&#39;] &#x3D; [&#39;a&#39;,undefined];</span><br><span class="line">console.log(y); &#x2F;&#x2F;b ,数组成员为undefined时，默认值仍会生效(因为在ES6内部使用严格相等运算符‘&#x3D;&#x3D;&#x3D;‘，判断一个位置是否有值，所以当一个数组成员严格等于undefined,默认值才会生效)</span><br><span class="line"></span><br><span class="line">let [x,y &#x3D; &#39;b&#39;] &#x3D; [&#39;a&#39;,null];</span><br><span class="line">console.log(y); &#x2F;&#x2F;null,如果一个数组成员是null,默认值就不会生效，因为null不严格等于undefined</span><br></pre></td></tr></table></figure>
+
+<h3 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a><strong>对象的解构赋值</strong></h3><p>对象的解构与数组有一个重要的不同，数组的元素是按次序排列的，变量的取值由它的位置决定；而<strong>对象的属性没有次序，变量必须与属性同名，才能取到正确的值</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1. 变量名与属性名一致的情况下</span><br><span class="line">let &#123;foo,bar&#125; &#x3D; &#123;foo : &quot;aaa&quot;,bar : &quot;bbb&quot;&#125;</span><br><span class="line">console.log(foo); &#x2F;&#x2F;aaa</span><br><span class="line">console.log(bar); &#x2F;&#x2F;bbb</span><br><span class="line">&#x2F;&#x2F;变量名与属性名不一致的情况下，必须这样写</span><br><span class="line">let &#123;a : name, b : age&#125; &#x3D; &#123;a : &#39;zhangsan&#39;, b : 33&#125;;</span><br><span class="line">console.log(name); &#x2F;&#x2F;zhangsan</span><br><span class="line">console.log(age);  &#x2F;&#x2F;33</span><br></pre></td></tr></table></figure>
+
+<p>实际上 对象的解构赋值是以这样的形式简写的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let &#123;foo : foo ,bar : bar&#125; &#x3D; &#123;foo : &quot;aaa&quot;,bar : &quot;bbb&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，对象的解构赋值的内部机制，是先找到同名属性，然后再赋值给对应的变量，真正被赋值的是后者，而不是前者，第一个foo/bar 是匹配的模式，对应的foo/bar属性值才是变量，真正被赋值的是属性值（也就是第二个foo/bar), 如果不能理解再看下面这个例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const node &#x3D; &#123;</span><br><span class="line">    grand : &#123;</span><br><span class="line">        father : &#123;</span><br><span class="line">            line : 1,</span><br><span class="line">            column : 5</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> let &#123;grand,grand : &#123; father&#125;,grand : &#123;father : &#123;column&#125;&#125;&#125; &#x3D; node;</span><br><span class="line"> console.log(father); &#x2F;&#x2F; &#123;line : 1, column : 5&#125;</span><br><span class="line"> console.log(column); &#x2F;&#x2F; 5</span><br><span class="line"> &#x2F;&#x2F; grand、fahter、column 分别对这三个属性解构赋值，grand、father是模式，只有column 是变量</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a><strong>字符串的解构赋值</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const [a,b,c,d,e] &#x3D; &#39;hello&#39;;</span><br><span class="line">console.log(a); &#x2F;&#x2F;h</span><br><span class="line">console.log(b); &#x2F;&#x2F;e</span><br><span class="line">console.log(c); &#x2F;&#x2F;l</span><br><span class="line">console.log(d); &#x2F;&#x2F;l</span><br><span class="line">console.log(e); &#x2F;&#x2F;o</span><br><span class="line"></span><br><span class="line">let &#123; length : len&#125; &#x3D; &#39;yahooa&#39;;</span><br><span class="line">console.log(len); &#x2F;&#x2F;5,类似数组的对象都有一个length属性，还可以对这个属性解构赋值</span><br></pre></td></tr></table></figure>
+
+<h3 id="数值和布尔值的解构赋值"><a href="#数值和布尔值的解构赋值" class="headerlink" title="数值和布尔值的解构赋值"></a><strong>数值和布尔值的解构赋值</strong></h3><p>解构赋值时，如果等号右边是数值和布尔值，则会先转为对象，但是等号右边为undefined 和 null时无法转为对象，所以对他们进行解构赋值时，都会报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let &#123;prop : x &#125; &#x3D; undefined;</span><br><span class="line">console.log(x); &#x2F;&#x2F;报错：Uncaught TypeError: Cannot destructure property &#96;prop&#96; of &#39;undefined&#39; or &#39;null</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a><strong>函数参数的解构赋值</strong></h3><p>函数的参数也可以使用解构参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function move(&#123;x &#x3D; 0,y &#x3D; 0&#125; &#x3D; &#123; &#125;)&#123;</span><br><span class="line">    return [x,y];</span><br><span class="line"> &#125;</span><br><span class="line">console.log(move(&#123;x : 3,y : 4&#125;)); &#x2F;&#x2F;[3,4]</span><br><span class="line">console.log(move(&#123;x : 3&#125;)); &#x2F;&#x2F;[3,0]</span><br><span class="line">console.log(move(&#123;&#125;)); &#x2F;&#x2F;[0,0]</span><br><span class="line">console.log(move()); &#x2F;&#x2F;[0,0]</span><br><span class="line">&#x2F;&#x2F;move()的参数是一个对象，通过对这个对象进行解构，得到变量x、y的值，如果解构失败，x和y 等于默认值</span><br><span class="line">function move2(&#123;x,y&#125; &#x3D; &#123;x : 1, y : 2 &#125;)&#123;</span><br><span class="line">    return [x,y];</span><br><span class="line">&#125;</span><br><span class="line">console.log(move2(&#123;x : 6,y : 8&#125;)); &#x2F;&#x2F;[6,8]</span><br><span class="line">console.log(move2(&#123;&#125;)); &#x2F;&#x2F;[undefined,undefined]</span><br><span class="line">console.log(move2()); &#x2F;&#x2F;[1,2]</span><br><span class="line">&#x2F;&#x2F;move2() 是为函数move的参数指定默认值，而不是为变量x和y指定默认值，所以与前一种写法的结果不太一样，undefined 就会触发函数的默认值</span><br></pre></td></tr></table></figure>
+
+<h3 id="解构用途"><a href="#解构用途" class="headerlink" title="解构用途"></a><strong>解构用途</strong></h3><h4 id="交换变量的值"><a href="#交换变量的值" class="headerlink" title="交换变量的值"></a>交换变量的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let x &#x3D; 1;</span><br><span class="line">let y &#x3D; 2;</span><br><span class="line">[x,y] &#x3D; [y,x];</span><br><span class="line">console.log(x); &#x2F;&#x2F;2</span><br><span class="line">console.log(y); &#x2F;&#x2F;1</span><br></pre></td></tr></table></figure>
+
+<h4 id="从函数返回多个值"><a href="#从函数返回多个值" class="headerlink" title="从函数返回多个值"></a>从函数返回多个值</h4><p>函数只能返回一个值，如果要返回多个值的话，只能将它们放在数组或者对象里返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function example()&#123;</span><br><span class="line">   return &#123;</span><br><span class="line">       foo : &#39;a&#39;,</span><br><span class="line">       bar : &#39;b&#39;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> let &#123;foo,bar&#125; &#x3D; example();</span><br><span class="line"> console.log(foo); &#x2F;&#x2F;a</span><br><span class="line"> console.log(bar); &#x2F;&#x2F;b</span><br></pre></td></tr></table></figure>
+
+<h4 id="函数参数的定义"><a href="#函数参数的定义" class="headerlink" title="函数参数的定义"></a>函数参数的定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;参数是一组有次序的值</span><br><span class="line">function example([x,y,z])&#123;</span><br><span class="line">    return x + y + z;</span><br><span class="line">&#125;</span><br><span class="line">example([1,2,3])</span><br><span class="line">console.log(example([1,2,3])); &#x2F;&#x2F;6</span><br><span class="line">&#x2F;&#x2F;参数是一组无次序的值</span><br><span class="line">function f(&#123;x,y,z&#125;)&#123;</span><br><span class="line">    return x + y + z;</span><br><span class="line">&#125;</span><br><span class="line">f(&#123;x : &#39;a&#39;, z : &#39;b&#39;, y : &#39;c&#39; &#125;);</span><br><span class="line"></span><br><span class="line">console.log(f(&#123;x : &#39;a&#39;, z : &#39;b&#39;, y : &#39;c&#39; &#125;)); &#x2F;&#x2F;acb</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/02/02/js%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E4%B8%8EPromise/" style="float: left;">
+        ← js事件循环与Promise
+    </a>
+    
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

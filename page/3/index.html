@@ -205,11 +205,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2021/02/25/Node-express中cookie-session使用/">Node--express中cookie,session使用</a></h3>
+                    <h3><a href="/2020/02/02/js事件循环与Promise/">js事件循环与Promise</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2021-02-25T03:14:12.000Z" itemprop="datePublished">
-          2021-02-25
+      <time datetime="2020-02-02T03:04:42.000Z" itemprop="datePublished">
+          2020-02-02
       </time>
     
 </span>
@@ -218,15 +218,13 @@
                 <div class="col-md-8">
                     <p>
                       
-                        1.Cookie 和 Session 会话管理：客户端和服务端通信过程中的数据是如何管理的
- 会话管理的技术：数据存在客户端 Cookie
- 数据存在服务端 Session
- Cookie: http请求是无状态的。也就是说即使第一次和服务器连接后并且登录成功后，第二次请求服务器依然不能知道当前请求是哪个用户。cookie的出现就是为了解决这个问题，第一次登录后服务器返回一些数据（cookie）给浏览器，然后浏览器保存在本地，当该用户发
+                        js事件循环机制众所周知，JS是单线程，单线程即任务是串行的，后一个任务需要等待前一个任务的执行，这就可能出现长时间的等待。但由于类似ajax网络请求、setTimeout时间延迟、DOM事件的用户交互等，这些任务并不消耗 CPU，是一种空等，资源浪费，因此出现了异步。
+通过将任务交给相应的异步模块去处理，主线程的效率大大提升，可以并行的去处理其他的操作。当异步处理完成，主线程空闲时，主线程读取相应的callback，进行后续的操作，最
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2021/02/25/Node-express中cookie-session使用/">Read More...</a>
+                        <a href="/2020/02/02/js事件循环与Promise/">Read More...</a>
                     </p>
                     
                 </div>
@@ -238,11 +236,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2021/02/03/Es6-Set和Map数据结构上/">Es6--Set和Map数据结构上</a></h3>
+                    <h3><a href="/2020/01/12/ES6结构赋值/">ES6结构赋值</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2021-02-03T02:00:55.000Z" itemprop="datePublished">
-          2021-02-03
+      <time datetime="2020-01-12T03:01:36.000Z" itemprop="datePublished">
+          2020-01-12
       </time>
     
 </span>
@@ -251,345 +249,13 @@
                 <div class="col-md-8">
                     <p>
                       
-                        ES6的Set和Map数据结构上
-Set和Map主要的应用场景在于数组去重和数据存储
-Set是一种叫做集合的数据结构，Map是一种叫做字典的数据结构
-
-1. 集合
-集合是由一组无序且唯一(即不能重复)的项组成的，可以想象成集合是一个既没有重复元素，也没有顺序概念的数组
-ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值
-Set 本身是一个构造函数，用来生成 Set 数据结构
-这里说的Set其实就是我们所要
+                        ES6结构赋值ES6解构：es6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称之为解构
+数组的解构赋值1234567891011121314var [a,b,c] &#x3D; [1,2,3];console.log(a);&#x2F;&#x2F;1console.log(b);&#x2F;&#x2F;2console.log(c);&#x2F;&#x2F;3&#x2F;&#x2F;本质上这种写法属于‘模式匹配‘，只要等
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2021/02/03/Es6-Set和Map数据结构上/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/12/08/React-的7中怪异代码/">React 的7中怪异代码</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-12-08T09:53:56.000Z" itemprop="datePublished">
-          2020-12-08
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                         阅读本文可能花费您 9 分钟
-教你如何更好地写 React。
-前言原文链接：7 code smells in your React components
-作者信息：Anton Gunnarsson
-翻译许可：
-正文自从使用 React 后，我见过越来越多可值得优化的点，比如：
-
-大量的 props
-props 的不兼容性
-props 复制为 state
-返回 JSX 的函数
-state 的多个状态
-useState 过多
-复杂的 us
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/12/08/React-的7中怪异代码/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/12/07/MongoDB/">MongoDB</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-12-07T09:47:18.000Z" itemprop="datePublished">
-          2020-12-07
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        MongoDB123456789101112131415161718&#x2F;&#x2F;缓存---&gt;文件---&gt;关系型数据库&#x2F;&#x2F;1.数据保存到内存：优点：1）读写非常快缺点：1）程序关闭导致数据丢失&#x2F;&#x2F;2.数据保存到文件：优点：1）数据可以永久保存缺点：1）频繁地IO操作，效率不高！2）数据管理不方便。例如查询某个数据需要全部读取出来，再匹配。&#x2F;&#x2F;3.数据保存到
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/12/07/MongoDB/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/11/23/vue中路由跳转view却不更新的问题与解决办法/">vue中路由跳转view却不更新的问题与解决办法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-11-23T09:45:38.000Z" itemprop="datePublished">
-          2020-11-23
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        vue中路由跳转view却不更新的问题与解决办法一般情况下路由从/myrouter跳转至/yourrouter时，view会发生更新。
-1若遇到&#x2F;products&#x2F;:id这样只改变id号的场景。就不会发生更新
-
-情况如下：
-router.js
-12345&#123;    path: &quot;&#x2F;products&#x2F;:id&quot;,    name: &quot;product&quot;, 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/11/23/vue中路由跳转view却不更新的问题与解决办法/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/11/03/正则表达式/">正则表达式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-11-03T07:23:04.000Z" itemprop="datePublished">
-          2020-11-03
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        正则表达式正则就是对字符串进行查找、匹配、替换等操作的一串“规则字符串”
-使用方法：在一对斜杠之间添加正则表达式 如：**/** 正则表达式 /
-正则表达式的组成
-普通字符
-特殊字符（元字符）：正则表达式中具有特殊意义的字符
-
-元字符
-
-
-\d
-表示数字
-
-
-
-\D
-非数字
-
-
-\s
-空格符
-
-
-\S
-非空格符
-
-
-\w
-字母或数字或下划线
-
-
-\W
-非字母、数字、下划线
-
-
-.
-任意字符（不包含换行符）
-
-
-\b
-单词边界
-
-
-实例1
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/11/03/正则表达式/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/10/08/Canvas的基本使用/">Canvas的基本使用</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-10-08T09:35:13.000Z" itemprop="datePublished">
-          2020-10-08
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Canvas的基本使用
-canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。
-
-体验Canvas什么是Canvas？HTML5 的 canvas 元素使用 J
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/10/08/Canvas的基本使用/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/09/14/Javascript-日常记录/">Javascript 日常记录</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-09-14T09:34:05.000Z" itemprop="datePublished">
-          2020-09-14
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Javascript 日常记录1、【数组去重】 四行代码原理：利用Js中对象的属性名不可重复的特点对数组进行去重操作
-若有数组:
-1arr &#x3D; [&#39;a&#39;,&#39;v&#39;,&#39;a&#39;,&#39;b&#39;,&#39;e&#39;,&#39;b&#39;,&#39;w&#39;,&#39;x&#39;]
-
-123456&lt;script&gt;    var object &#x3D; &#
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/09/14/Javascript-日常记录/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/09/02/url-js/">url.js</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-09-02T06:32:22.000Z" itemprop="datePublished">
-          2020-09-02
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        URL.js简介
-URI.js是一个用于处理URL的JavaScript库。可以对URI进行解析， 它提供了一个 jQuery风格 API（Fluent Interface，Method Chaining）来读写所有常规组件和一些方便的方法，如.directory（）和.authority（）。
-URI.js提供了简单但强大的查询字符串处理方式，具有许多URI规范化函数并转换相对/绝对路径。
-而URI.js提供了一个jQuery插件。 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/09/02/url-js/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/08/05/Git/">Git</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-08-05T04:31:06.000Z" itemprop="datePublished">
-          2020-08-05
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Git
-专有名词：
-
-
-Workspace：工作区
-Index / Stage：暂存区
-Repository：仓库区（或本地仓库）
-Remote：远程仓库
-
-
-快速使用代码拉取
-1$ git clone + Git仓库的地址
-
-切换分支
-12$ git branch -a  &#x2F;&#x2F;查看分支$ git checkout -b dev-0930 origin&#x2F;dev-0930  &#x2F;&#x2F;切换分支
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/08/05/Git/">Read More...</a>
+                        <a href="/2020/01/12/ES6结构赋值/">Read More...</a>
                     </p>
                     
                 </div>
@@ -599,8 +265,8 @@ Remote：远程仓库
         </div>
         
         <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/page/2/">← Newer Posts</a>
           
-          <a class="pull-right" href="/page/2/">Older Posts →</a>
         </nav>
     </div>
 </section>

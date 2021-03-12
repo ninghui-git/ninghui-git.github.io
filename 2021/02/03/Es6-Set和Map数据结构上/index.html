@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Es6--Set和Map数据结构上 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-02-03T02:00:55.000Z" itemprop="datePublished">
+          2021-02-03
+      </time>
+    
+</span>
+                <h1>Es6--Set和Map数据结构上</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="ES6的Set和Map数据结构上"><a href="#ES6的Set和Map数据结构上" class="headerlink" title="ES6的Set和Map数据结构上"></a>ES6的Set和Map数据结构上</h3><blockquote>
+<p>Set和Map主要的应用场景在于<strong>数组去重</strong>和<strong>数据存储</strong></p>
+<p>Set是一种叫做<strong>集合</strong>的数据结构，Map是一种叫做<strong>字典</strong>的数据结构</p>
+</blockquote>
+<h4 id="1-集合"><a href="#1-集合" class="headerlink" title="1. 集合"></a>1. 集合</h4><ul>
+<li>集合是由一组无序且唯一(即不能重复)的项组成的，可以想象成集合是一个既没有重复元素，也没有顺序概念的数组</li>
+<li>ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值</li>
+<li>Set 本身是一个构造函数，用来生成 Set 数据结构</li>
+<li>这里说的Set其实就是我们所要讲到的集合，先来看下基础用法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const s &#x3D; new Set();</span><br><span class="line"></span><br><span class="line">[2, 3, 5, 4, 5, 2, 2].forEach(x &#x3D;&gt; s.add(x));</span><br><span class="line"></span><br><span class="line">for (let i of s) &#123;</span><br><span class="line">  console.log(i);   &#x2F;&#x2F; 2 3 5 4</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 去除数组的重复成员</span><br><span class="line">let array &#x3D; [1,2,1,4,5,3];</span><br><span class="line">[...new Set(array)]     &#x2F;&#x2F; [1, 2, 4, 5, 3]</span><br></pre></td></tr></table></figure>
+
+<p>首先来看一下ES6中Set类(数据结构)为基础实现的集合</p>
+<h5 id="Set实例的属性和方法"><a href="#Set实例的属性和方法" class="headerlink" title="Set实例的属性和方法"></a>Set实例的属性和方法</h5><ul>
+<li>Set的属性：<ul>
+<li>size：返回集合所包含元素的数量</li>
+</ul>
+</li>
+<li>Set的方法：<ul>
+<li>操作方法<ul>
+<li>add(value)：向集合添加一个新的项</li>
+<li>delete(value)：从集合中移除一个值</li>
+<li>has(value)：如果值在集合中存在，返回true,否则false</li>
+<li>clear(): 移除集合里所有的项</li>
+</ul>
+</li>
+<li>遍历方法<ul>
+<li>keys()：返回一个包含集合中所有键的数组</li>
+<li>values()：返回一个包含集合中所有值的数组</li>
+<li>entries：返回一个包含集合中所有键值对的数组</li>
+<li>forEach()：用于对集合成员执行某种操作，没有返回值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="创建一个集合"><a href="#创建一个集合" class="headerlink" title="创建一个集合"></a>创建一个集合</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Set(arr &#x3D; []) &#123;    &#x2F;&#x2F; 可以传入数组</span><br><span class="line">    let items &#x3D; &#123;&#125;;</span><br><span class="line">    this.size &#x3D; 0;  &#x2F;&#x2F; 记录集合中成员的数量</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; Set;</span><br></pre></td></tr></table></figure>
+
+<p>这里用<code>&#123;&#125;</code>对象来表示集合，也是因为对象不允许一个键指向两个不同的属性，保证了集合里的元素都是唯一的</p>
+<p>接下来，就需要按照ES6中Set类的实现，添加一些集合的<strong>操作方法</strong>了</p>
+<h5 id="has方法"><a href="#has方法" class="headerlink" title="has方法"></a>has方法</h5><p>首先要实现的是has方法，因为在add和delete等其他方法中都会被调用，下面来看一下它的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Set() &#123;</span><br><span class="line">    let items &#x3D; &#123;&#125;;</span><br><span class="line">    this.size &#x3D; 0;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; has(val)方法</span><br><span class="line">    this.has &#x3D; function(val) &#123;</span><br><span class="line">        &#x2F;&#x2F; 对象都有hasOwnProperty方法，判断是否拥有特定属性</span><br><span class="line">        return items.hasOwnProperty(val);  </span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="add方法"><a href="#add方法" class="headerlink" title="add方法"></a>add方法</h5><p>接下来要实现add方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; add(val)方法</span><br><span class="line">this.add &#x3D; function(val) &#123;</span><br><span class="line">  if (!this.has(val)) &#123;</span><br><span class="line">     items[val] &#x3D; val;</span><br><span class="line">     this.size++;    &#x2F;&#x2F; 累加集合成员数量</span><br><span class="line">     return true;</span><br><span class="line">  &#125;</span><br><span class="line">  return false;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>对于给定的val，可以检测是否存在于集合中</p>
+<ul>
+<li>如果不存在，就添加到集合中，返回true</li>
+<li>如果存在，就直接返回false，不做任何操作</li>
+</ul>
+<h5 id="delete和clear方法"><a href="#delete和clear方法" class="headerlink" title="delete和clear方法"></a>delete和clear方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; delete(val)方法</span><br><span class="line">this.delete &#x3D; function(val) &#123;</span><br><span class="line">    if (this.has(val)) &#123;</span><br><span class="line">        delete items[val];  &#x2F;&#x2F; 将items对象上的属性删掉</span><br><span class="line">        this.size--;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F; clear方法</span><br><span class="line">this.clear &#x3D; function() &#123;</span><br><span class="line">    items &#x3D; &#123;&#125;;     &#x2F;&#x2F; 直接将集合赋一个空对象即可</span><br><span class="line">    this.size &#x3D; 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>在delete方法中，判断val是否存在于集合中，如果存在就直接从集合中删掉，返回true</p>
+<p>以上完成的都是<strong>操作方法</strong>，下面我们再来实现一下<strong>遍历方法</strong></p>
+<h5 id="keys和values方法"><a href="#keys和values方法" class="headerlink" title="keys和values方法"></a>keys和values方法</h5><p>因为通过ES6对Object的扩展可以轻松实现对应的方法，下面看一下具体实现，上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const Set &#x3D; require(&#39;.&#x2F;set&#39;);</span><br><span class="line"></span><br><span class="line">let set &#x3D; new Set();</span><br><span class="line"></span><br><span class="line">set.add(1);</span><br><span class="line">set.add(3);</span><br><span class="line">set.add(2);</span><br><span class="line">console.log(set.keys()); &#x2F;&#x2F;[ &#39;1&#39;, &#39;2&#39;, &#39;3&#39; ]</span><br><span class="line">console.log(set.values()); &#x2F;&#x2F;[ 1, 2, 3 ]</span><br><span class="line">console.log(set.has(1)); &#x2F;&#x2F;true</span><br><span class="line">console.log(set.delete(1)); &#x2F;&#x2F;true</span><br><span class="line">console.log(set.size); &#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+
+<p>这里我们看到和ES6中的Set有点区别，因为Object的这几个方法都是按照数值大小，从小到大遍历的数组，具体实现还是有些不同的</p>
+<h5 id="forEach方法"><a href="#forEach方法" class="headerlink" title="forEach方法"></a>forEach方法</h5><p>ES6中Set结构的实例上带的forEach方法，其实和数组的forEach方法很相似，只不过Set结构的键名就是键值，所以第一个参数与第二个参数的值永远都是一样的</p>
+<p>下面就按照实现数组的forEach方法，我们来完成Set的forEach方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; forEach(fn, context)方法</span><br><span class="line">  this.forEach &#x3D; function (fn, context &#x3D; this) &#123;</span><br><span class="line">    for (let i &#x3D; 0; i &lt; this.size; i++) &#123;</span><br><span class="line">      let item &#x3D; Object.keys(items)[i];</span><br><span class="line">      fn.call(context, item, item, items);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>使用forEach方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; set.js</span><br><span class="line">const Set &#x3D; require(&#39;.&#x2F;set&#39;);</span><br><span class="line">let set &#x3D; new Set();</span><br><span class="line">set.add(1);</span><br><span class="line">set.add(4);</span><br><span class="line">set.add(&#39;3&#39;);</span><br><span class="line">set.forEach((value, key) &#x3D;&gt; console.log(key + &#39; : &#39; + value));  &#x2F;&#x2F; 1:1, 3:3, 4:4</span><br><span class="line">let arr &#x3D; set.values();     &#x2F;&#x2F; [ 1, 3, 4 ]</span><br></pre></td></tr></table></figure>
+
+<p>基本上实现了Set结构的方法，不过，发现一个问题，那就是每次添加一个元素都要add这样写起来确实好麻烦，Set是可以接收一个数组作为参数的，那么把这个也实现一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">function Set(arr &#x3D; []) &#123; &#x2F;&#x2F; 可以传入一个数组</span><br><span class="line">  let items &#x3D; &#123;&#125;;</span><br><span class="line">  this.size &#x3D; 0; &#x2F;&#x2F;记录集合中成员的数量</span><br><span class="line">  &#x2F;&#x2F; has(val)方法</span><br><span class="line">  this.has &#x3D; function (val) &#123;</span><br><span class="line">    &#x2F;&#x2F; 对象都有hasOwnProperty方法，判断是否拥有特定属性</span><br><span class="line">    return items.hasOwnProperty(val);</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; add(val)方法</span><br><span class="line">  this.add &#x3D; function (val) &#123;</span><br><span class="line">    if (!this.has(val)) &#123;</span><br><span class="line">      items[val] &#x3D; val;</span><br><span class="line">      this.size++;    &#x2F;&#x2F; 累加集合成员数量</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; delete(val)方法</span><br><span class="line">  this.delete &#x3D; function (val) &#123;</span><br><span class="line">    if (this.has(val)) &#123;</span><br><span class="line">      delete items[val];  &#x2F;&#x2F; 将items对象上的属性删掉</span><br><span class="line">      this.size--;</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; clear方法</span><br><span class="line">  this.clear &#x3D; function () &#123;</span><br><span class="line">    items &#x3D; &#123;&#125;;     &#x2F;&#x2F; 直接将集合赋一个空对象即可</span><br><span class="line">    this.size &#x3D; 0;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; keys()方法</span><br><span class="line">  this.keys &#x3D; function () &#123;</span><br><span class="line">    return Object.keys(items);  &#x2F;&#x2F; 返回遍历集合的所有键名的数组</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; values()方法</span><br><span class="line">  this.values &#x3D; function () &#123;</span><br><span class="line">    return Object.values(items);  &#x2F;&#x2F; 返回遍历集合的所有键值的数组</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; forEach(fn, context)方法</span><br><span class="line">  this.forEach &#x3D; function (fn, context &#x3D; this) &#123;</span><br><span class="line">    for (let i &#x3D; 0; i &lt; this.size; i++) &#123;</span><br><span class="line">      let item &#x3D; Object.keys(items)[i];</span><br><span class="line">      fn.call(context, item, item, items);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  arr.forEach((val, i) &#x3D;&gt; &#123;</span><br><span class="line">    this.add(val);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; Set;</span><br></pre></td></tr></table></figure>
+
+<p>再看看现在能不能支持传入数组了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; set.js</span><br><span class="line">const Set &#x3D; require(&#39;.&#x2F;set&#39;);</span><br><span class="line"></span><br><span class="line">let arr &#x3D; new Set([1, 2, 3]).values();</span><br><span class="line"></span><br><span class="line">m &#x3D; new Set(arr.map(x &#x3D;&gt; x * 2));</span><br><span class="line"></span><br><span class="line">f &#x3D; new Set(arr.filter(x &#x3D;&gt; x&gt;1));</span><br><span class="line"></span><br><span class="line">console.log(m.values());    &#x2F;&#x2F; [ 2, 4, 6 ]</span><br><span class="line">console.log(f.values());    &#x2F;&#x2F; [ 2, 3 ]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 数组去重</span><br><span class="line">let arr2 &#x3D; new Set([3, 5, 2, 1, 2, 5, 5]).values();</span><br><span class="line">console.log(arr2);  &#x2F;&#x2F; [ 1, 2, 3, 5 ]</span><br></pre></td></tr></table></figure>
+
+<h5 id="除此之外，Set还可以实现并集-union-交集-intersect-差集-difference"><a href="#除此之外，Set还可以实现并集-union-交集-intersect-差集-difference" class="headerlink" title="除此之外，Set还可以实现并集(union),交集(intersect),差集(difference)"></a>除此之外，Set还可以实现并集(union),交集(intersect),差集(difference)</h5><h5 id="union并集和intersect交集"><a href="#union并集和intersect交集" class="headerlink" title="union并集和intersect交集"></a>union并集和intersect交集</h5><ul>
+<li>并集的数学概念，集合A和集合B的并集，表示为A∪B</li>
+<li>交集的数学概念，集合A和集合B的交集，表示为A∩B</li>
+</ul>
+<p><img src="file:///D:/Blog/HexoBlog/source/image/Set/%E4%BA%A4%E5%B9%B6.png" alt="交并"></p>
+<p>先来实现union方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 并集</span><br><span class="line">  this.union &#x3D; function (other) &#123;</span><br><span class="line">    let union &#x3D; new Set();</span><br><span class="line">    let values &#x3D; this.values();</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      union.add(values[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    values &#x3D; other.values();    &#x2F;&#x2F; 将values重新赋值为新的集合</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      union.add(values[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return union;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; 交集</span><br><span class="line">  this.intersect &#x3D; function (other) &#123;</span><br><span class="line">    let intersect &#x3D; new Set();</span><br><span class="line">    let values &#x3D; this.values();</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      if (other.has(values[i])) &#123;     &#x2F;&#x2F; 查看是否也存在于other中</span><br><span class="line">        intersect.add(values[i]);   &#x2F;&#x2F; 存在的话就像intersect中添加元素</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return intersect;</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>再看下difference差集的实现</p>
+<ul>
+<li><p>差集的数学概念，集合A和集合B的差集，表示为A-B</p>
+<p><img src="file:///D:/Blog/HexoBlog/source/image/Set/%E5%B7%AE%E9%9B%86.png" alt="差集"></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 差集</span><br><span class="line">  this.difference &#x3D; function (other) &#123;</span><br><span class="line">    let difference &#x3D; new Set();</span><br><span class="line">    let values &#x3D; this.values();</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      if (!other.has(values[i])) &#123;    &#x2F;&#x2F; 将不存在于other集合中的添加到新的集合中</span><br><span class="line">        difference.add(values[i]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return difference;</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Set的完整实现"><a href="#Set的完整实现" class="headerlink" title="Set的完整实现"></a>Set的完整实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; set.js</span><br><span class="line">function Set(arr &#x3D; []) &#123; &#x2F;&#x2F; 可以传入一个数组</span><br><span class="line">  let items &#x3D; &#123;&#125;;</span><br><span class="line">  this.size &#x3D; 0; &#x2F;&#x2F;记录集合中成员的数量</span><br><span class="line">  &#x2F;&#x2F; has(val)方法</span><br><span class="line">  this.has &#x3D; function (val) &#123;</span><br><span class="line">    &#x2F;&#x2F; 对象都有hasOwnProperty方法，判断是否拥有特定属性</span><br><span class="line">    return items.hasOwnProperty(val);</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; add(val)方法</span><br><span class="line">  this.add &#x3D; function (val) &#123;</span><br><span class="line">    if (!this.has(val)) &#123;</span><br><span class="line">      items[val] &#x3D; val;</span><br><span class="line">      this.size++;    &#x2F;&#x2F; 累加集合成员数量</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; delete(val)方法</span><br><span class="line">  this.delete &#x3D; function (val) &#123;</span><br><span class="line">    if (this.has(val)) &#123;</span><br><span class="line">      delete items[val];  &#x2F;&#x2F; 将items对象上的属性删掉</span><br><span class="line">      this.size--;</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; clear方法</span><br><span class="line">  this.clear &#x3D; function () &#123;</span><br><span class="line">    items &#x3D; &#123;&#125;;     &#x2F;&#x2F; 直接将集合赋一个空对象即可</span><br><span class="line">    this.size &#x3D; 0;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; keys()方法</span><br><span class="line">  this.keys &#x3D; function () &#123;</span><br><span class="line">    return Object.keys(items);  &#x2F;&#x2F; 返回遍历集合的所有键名的数组</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; values()方法</span><br><span class="line">  this.values &#x3D; function () &#123;</span><br><span class="line">    return Object.values(items);  &#x2F;&#x2F; 返回遍历集合的所有键值的数组</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; forEach(fn, context)方法</span><br><span class="line">  this.forEach &#x3D; function (fn, context &#x3D; this) &#123;</span><br><span class="line">    for (let i &#x3D; 0; i &lt; this.size; i++) &#123;</span><br><span class="line">      let item &#x3D; Object.keys(items)[i];</span><br><span class="line">      fn.call(context, item, item, items);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; 并集</span><br><span class="line">  this.union &#x3D; function (other) &#123;</span><br><span class="line">    let union &#x3D; new Set();</span><br><span class="line">    let values &#x3D; this.values();</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      union.add(values[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    values &#x3D; other.values();    &#x2F;&#x2F; 将values重新赋值为新的集合</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      union.add(values[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return union;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; 交集</span><br><span class="line">  this.intersect &#x3D; function (other) &#123;</span><br><span class="line">    let intersect &#x3D; new Set();</span><br><span class="line">    let values &#x3D; this.values();</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      if (other.has(values[i])) &#123;     &#x2F;&#x2F; 查看是否也存在于other中</span><br><span class="line">        intersect.add(values[i]);   &#x2F;&#x2F; 存在的话就像intersect中添加元素</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return intersect;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; 差集</span><br><span class="line">  this.difference &#x3D; function (other) &#123;</span><br><span class="line">    let difference &#x3D; new Set();</span><br><span class="line">    let values &#x3D; this.values();</span><br><span class="line">    for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">      if (!other.has(values[i])) &#123;    &#x2F;&#x2F; 将不存在于other集合中的添加到新的集合中</span><br><span class="line">        difference.add(values[i]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return difference;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F; 子集</span><br><span class="line">  this.subset &#x3D; function (other) &#123;</span><br><span class="line">    if (this.size &gt; other.size) &#123;</span><br><span class="line">      return false;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      let values &#x3D; this.values();</span><br><span class="line">      for (let i &#x3D; 0; i &lt; values.length; i++) &#123;</span><br><span class="line">        if (!other.has(values[i])) &#123;</span><br><span class="line">          return false;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  arr.forEach((val, i) &#x3D;&gt; &#123;</span><br><span class="line">    this.add(val);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; Set;</span><br></pre></td></tr></table></figure>
+
+<p>测试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; index.js</span><br><span class="line">const Set &#x3D; require(&#39;.&#x2F;set&#39;);</span><br><span class="line"></span><br><span class="line">let set &#x3D; new Set([1, 2, 3]);</span><br><span class="line"></span><br><span class="line">console.log(set.values()); &#x2F;&#x2F;[ 1, 2, 3 ]</span><br><span class="line"></span><br><span class="line">console.log(set.keys());&#x2F;&#x2F; [ &#39;1&#39;, &#39;2&#39;, &#39;3&#39; ]</span><br><span class="line"></span><br><span class="line">console.log(set.size); &#x2F;&#x2F; 3</span><br><span class="line"></span><br><span class="line">set.delete(2);</span><br><span class="line"></span><br><span class="line">console.log(set.values()); &#x2F;&#x2F; [1, 3]</span><br><span class="line"></span><br><span class="line">set.clear();</span><br><span class="line"></span><br><span class="line">console.log(set.size); &#x2F;&#x2F; 0</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 并集</span><br><span class="line">let a &#x3D; [1, 2, 3];</span><br><span class="line">let b &#x3D; new Set([4, 3, 2]);</span><br><span class="line">let union &#x3D; new Set(a).union(b).values();</span><br><span class="line">console.log(union); &#x2F;&#x2F; [ 1, 2, 3, 4 ]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 交集</span><br><span class="line">let c &#x3D; new Set([4, 3, 2]);</span><br><span class="line">let intersect &#x3D; new Set([1, 2, 3]).intersect(c).values();</span><br><span class="line">console.log(intersect); &#x2F;&#x2F; [2, 3]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 差集</span><br><span class="line">let d &#x3D; new Set([4, 3, 2]);</span><br><span class="line">let difference &#x3D; new Set([1, 2, 3]).difference(d).values();</span><br><span class="line">console.log(difference); &#x2F;&#x2F; [1]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 子集</span><br><span class="line">let e &#x3D; new Set([1, 2, 3, 4]);</span><br><span class="line">let subset &#x3D; new Set([1, 2, 3]).subset(e);</span><br><span class="line">console.log(subset); &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2021/02/25/Node-express%E4%B8%ADcookie-session%E4%BD%BF%E7%94%A8/" style="float: left;">
+        ← Node--express中cookie,session使用
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/12/08/React-%E7%9A%847%E4%B8%AD%E6%80%AA%E5%BC%82%E4%BB%A3%E7%A0%81/">
+        React 的7中怪异代码 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

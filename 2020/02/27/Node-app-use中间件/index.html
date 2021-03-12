@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Node--app.use中间件 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-02-27T03:16:57.000Z" itemprop="datePublished">
+          2020-02-27
+      </time>
+    
+</span>
+                <h1>Node--app.use中间件</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="1-Express中路由和中间件"><a href="#1-Express中路由和中间件" class="headerlink" title="1. Express中路由和中间件"></a>1. Express中路由和中间件</h3><h6 id="路由：就是如何处理HTTP请求中的路径部分"><a href="#路由：就是如何处理HTTP请求中的路径部分" class="headerlink" title="路由：就是如何处理HTTP请求中的路径部分"></a>路由：就是如何处理HTTP请求中的路径部分</h6><h6 id="中间件：就是在收到请求后和发送响应之前这个阶段执行的一些函数"><a href="#中间件：就是在收到请求后和发送响应之前这个阶段执行的一些函数" class="headerlink" title="中间件：就是在收到请求后和发送响应之前这个阶段执行的一些函数"></a>中间件：就是在收到请求后和发送响应之前这个阶段执行的一些函数</h6><h5 id="1-1-应用及中间件"><a href="#1-1-应用及中间件" class="headerlink" title="1.1 应用及中间件"></a>1.1 应用及中间件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; next方法的作用就是将请求传递到下一个中间件</span><br><span class="line">&#x2F;*</span><br><span class="line">  当请求进来，会从第一个中间件开始进行匹配</span><br><span class="line">     如果匹配，则进来</span><br><span class="line">     如果请求进入中间件之后，没有调用 next 则代码会停在当前中间件</span><br><span class="line">     如果调用了 next 则继续向后找到第一个匹配的中间件</span><br><span class="line">     如果不匹配，则继续判断匹配下一个中间件</span><br><span class="line">*&#x2F;</span><br><span class="line">&#x2F;&#x2F; 不关心请求路径的请求</span><br><span class="line">&#x2F;&#x2F; 不管以什么路径请求只要有next()传递</span><br><span class="line">app.use((req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&#39;1&#39;) &#x2F;&#x2F; 1</span><br><span class="line">    next()</span><br><span class="line">&#125;)</span><br><span class="line">app.use((req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&#39;2&#39;)  &#x2F;&#x2F; 2</span><br><span class="line">    next()</span><br><span class="line">&#125;)</span><br><span class="line">app.use((req,res.next) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&#39;3&#39;)  &#x2F;&#x2F; 3</span><br><span class="line">&#125;)</span><br><span class="line">&#x2F;&#x2F; 关心请求路径的请求</span><br><span class="line">app.use((req, res, next) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;1&#39;)</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.use(&#39;&#x2F;b&#39;, (req, res, next) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;b&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 以 &#x2F;a 开头的路径中间件</span><br><span class="line">app.use(&#39;&#x2F;a&#39;, (req, res, next) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;a&#39;)</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.use((req, res, next) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;2&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 当在浏览器中以 &#x2F;a 开头的请求时，会输出 1 a 2</span><br><span class="line">&#x2F;&#x2F; 当在浏览器中以 &#x2F;b 开头的请求时，会输出 1 b,这里不会输出 2 因为当请求&#x2F;b开头的请求后没有next()方法传递就会停留在那个请求中</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-2-错误处理中间件"><a href="#1-2-错误处理中间件" class="headerlink" title="1.2 错误处理中间件"></a>1.2 错误处理中间件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">app.use(&#39;&#x2F;user&#39;,(req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">   try &#123;</span><br><span class="line">       console.log(has error)</span><br><span class="line">       next()</span><br><span class="line">   &#125; catch (err) &#123;</span><br><span class="line">       console.log(&#39;error&#39;)</span><br><span class="line">       next(err)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&#x2F;&#x2F; 全局错误处理中间件</span><br><span class="line">app.use((err,req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(err.stack)</span><br><span class="line">    res.status(500).send(&#39;error message&#39;)</span><br><span class="line">&#125;)</span><br><span class="line">const express &#x3D; require(&#39;express&#39;)</span><br><span class="line">const fs &#x3D; require(&#39;fs&#39;)</span><br><span class="line">const path &#x3D; require(&#39;path&#39;)</span><br><span class="line"></span><br><span class="line">const app &#x3D; express()</span><br><span class="line"></span><br><span class="line">app.get(&#39;&#x2F;a&#39;,(req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">  fs.readFile(path.join(__dirname,&#39;.&#x2F;datas.txt&#39;),&#39;utf8&#39;,(err,data) &#x3D;&gt; &#123;</span><br><span class="line">    if (err) &#123;</span><br><span class="line">      return next(err)</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(data)</span><br><span class="line">    next()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(&#39;&#x2F;a&#39;, (req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;&#x2F;a&#39;)</span><br><span class="line">  res.send(&#39;&#x2F;a&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 当不匹配任何请求路径时 会进去此错误处理</span><br><span class="line">app.use((req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">  res.send(&#39;404 not Found&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 全局错误处理中间件</span><br><span class="line">app.use((err,req,res,next) &#x3D;&gt; &#123;</span><br><span class="line">  res.status(500).send(err.message)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(3000, () &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;running...&#39;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-3-express中的router"><a href="#1-3-express中的router" class="headerlink" title="1.3 express中的router"></a>1.3 express中的router</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;app.js</span><br><span class="line"></span><br><span class="line">const express &#x3D; require(&#39;express&#39;)</span><br><span class="line"></span><br><span class="line">const public &#x3D; require(&#39;.&#x2F;router&#x2F;public&#39;)</span><br><span class="line">const user &#x3D; require(&#39;.&#x2F;router&#x2F;user&#39;)</span><br><span class="line"></span><br><span class="line">const app &#x3D; express()</span><br><span class="line"></span><br><span class="line">app.use(&#39;&#x2F;public&#39;, public) &#x2F;&#x2F; 当请求以&#x2F;public开头的路径时才会进来</span><br><span class="line"></span><br><span class="line">app.use(&#39;&#x2F;user&#39;, user) &#x2F;&#x2F; 当请求以&#x2F;uer开头的路径时才会进来</span><br><span class="line"></span><br><span class="line">app.listen(3000,() &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;running...&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; router</span><br><span class="line">&#x2F;&#x2F; 1.user.js</span><br><span class="line">const express &#x3D; require(&#39;express&#39;)</span><br><span class="line">const router &#x3D; express.Router()</span><br><span class="line"></span><br><span class="line">router.get(&#39;&#x2F;a&#39;, (req,res) &#x3D;&gt; &#123;</span><br><span class="line">  res.send(&#39;hello node&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; router</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 2.public.js</span><br><span class="line">const express &#x3D; require(&#39;express&#39;)</span><br><span class="line">const router &#x3D; express.Router()</span><br><span class="line"></span><br><span class="line">router.get(&#39;&#x2F;b&#39;, (req,res) &#x3D;&gt; &#123;</span><br><span class="line">  res.send(&#39;hello world&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; router</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>app.router() 要挂载在所有第三方中间件的后面，因为前面配置的中间件是app.router()中请求处理函数的依赖</strong></li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/03/05/Vue%E4%B8%AD%E7%9A%84keepAlive%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%BA%94%E7%94%A8/" style="float: left;">
+        ← Vue中的keepAlive的介绍应用
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/02/19/js%E5%AE%9E%E7%8E%B0%E9%93%BE%E8%A1%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+        js实现链表数据结构 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

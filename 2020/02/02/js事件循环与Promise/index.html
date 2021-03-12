@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>前端Http协议缓存 | Hexo</title>
+  <title>js事件循环与Promise | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -173,71 +173,41 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2020-05-21T07:15:51.000Z" itemprop="datePublished">
-          2020-05-21
+      <time datetime="2020-02-02T03:04:42.000Z" itemprop="datePublished">
+          2020-02-02
       </time>
     
 </span>
-                <h1>前端Http协议缓存</h1>
+                <h1>js事件循环与Promise</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>用户获取网络资源，需要通过非常长的网络去服务器上请求资源,另外服务端为了应对大量的用户请求而不断的提升硬件性能与带宽。这对用户与服务端都非常的不友好。而缓存就是为了解决用户请求速度与释放服务器压力而生的。</p>
-<h2 id="缓存的判断规则"><a href="#缓存的判断规则" class="headerlink" title="缓存的判断规则"></a>缓存的判断规则</h2><h3 id="过期机制"><a href="#过期机制" class="headerlink" title="过期机制"></a>过期机制</h3><p>过期机制就是浏览器根据缓存的有效期进行判断，如果在有效期内就使用缓存，否则就抛弃这个缓存。</p>
-<p>一个缓存副本必须满足以下条件，浏览器会认为它是有效的，足够新的：</p>
-<p>　　　　1. 含有完整的过期时间控制头信息（HTTP协议报头），并且仍在有效期内；</p>
-<p>　　　　2. 浏览器已经使用过这个缓存副本，并且在一个会话中已经检查过新鲜度；</p>
-<h3 id="验证机制"><a href="#验证机制" class="headerlink" title="验证机制"></a>验证机制</h3><p>浏览器带上本地缓存副本的验证信息提交给服务器(Last-Modified,ETag)，由服务器决定是否采用这个缓存。</p>
-<p>客户端请求的时候带上Last-Modified，服务器进行验证返回If-Modified-Since来确定资源是否是有效缓存。<br>另外在控制头信息带上这个资源的实体标签Etag（Entity Tag），它可以用来作为浏览器再次请求过程的校验标识。如过发现校验标识不匹配，说明资源已经被修改或过期，浏览器需求重新获取资源内容。</p>
-<h2 id="缓存来源"><a href="#缓存来源" class="headerlink" title="缓存来源"></a>缓存来源</h2><h4 id="from-disk-cache"><a href="#from-disk-cache" class="headerlink" title="from disk cache"></a>from disk cache</h4><p>此资源是从磁盘当中取出的，也是在已经在之前的某个时间加载过该资源，不会请求服务器但是此资源不会随着该页面的关闭而释放掉，因为是存在硬盘当中的，下次打开仍会from disk cache。</p>
-<h4 id="from-memory-cache"><a href="#from-memory-cache" class="headerlink" title="from memory cache"></a>from memory cache</h4><p>字面理解是从内存中，其实也是字面的含义，这个资源是直接从内存中拿到的，不会请求服务器一般已经加载过该资源且缓存在了内存当中，当关闭该页面时，此资源就被内存释放掉了，再次重新打开相同页面时不会出现from memory cache的情况。</p>
-<h4 id="请求来源"><a href="#请求来源" class="headerlink" title="请求来源"></a>请求来源</h4><p>当http状态为200是实实在在从浏览器获取的资源，当http状态为304时该数字是与服务端通信报文的大小，并不是该资源本身的大小，该资源是从本地获取的。</p>
-<h2 id="缓存类型"><a href="#缓存类型" class="headerlink" title="缓存类型"></a>缓存类型</h2><h3 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h3><h4 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&#39;Expires&#39;,&#39;Mon Jan 01 2018 08:00:00 GMT&#39;) &#x2F;&#x2F;必须用格林威治时间格式</span><br></pre></td></tr></table></figure>
+      		<h2 id="js事件循环机制"><a href="#js事件循环机制" class="headerlink" title="js事件循环机制"></a>js事件循环机制</h2><p>众所周知，JS是单线程，单线程即任务是串行的，后一个任务需要等待前一个任务的执行，这就可能出现长时间的等待。但由于类似ajax网络请求、setTimeout时间延迟、DOM事件的用户交互等，这些任务并不消耗 CPU，是一种空等，资源浪费，因此出现了异步。</p>
+<p>通过将任务交给相应的异步模块去处理，主线程的效率大大提升，可以并行的去处理其他的操作。当异步处理完成，主线程空闲时，主线程读取相应的callback，进行后续的操作，最大程度的利用CPU。</p>
+<p>此时出现了同步执行和异步执行的概念，同步执行是主线程按照顺序，串行执行任务；异步执行就是cpu跳过等待，先处理后续的任务（CPU与网络模块、timer等并行进行任务）。由此产生了任务队列与事件循环，来协调主线程与异步模块之间的工作。</p>
+<h2 id="任务队列"><a href="#任务队列" class="headerlink" title="任务队列"></a>任务队列</h2><p>一个线程中，事件循环是唯一的，但是任务队列可以拥有多个。<br>任务队列又分为macro-task（宏任务）与micro-task（微任务）。</p>
+<p>宏队列macro-task大概包括：script(整体代码), setTimeout, setInterval, setImmediate, I/O, UI rendering。<br>微队列micro-task大概包括: process.nextTick, Promise, Object.observe(已废弃), MutationObserver(html5新特性)。process.nextTick会先于Promise.then执行。</p>
+<p>来自不同任务源的任务会进入到不同的任务队列。其中setTimeout与setInterval是同源的。<br>事件循环的顺序，决定了JavaScript代码的执行顺序。它从script(整体代码)开始第一次循环。之后全局上下文进入函数调用栈。直到调用栈清空(只剩全局)，然后执行所有的micro-task。当所有可执行的micro-task执行完毕之后。循环再次从macro-task开始，找到其中一个任务队列执行完毕，然后再执行所有的micro-task，这样一直循环下去。<br>其中每一个任务的执行，无论是macro-task还是micro-task，都是借助函数调用栈来完成。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">const first &#x3D; () &#x3D;&gt; (new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">            console.log(3);</span><br><span class="line">            let p &#x3D; new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">                console.log(7);</span><br><span class="line">                setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">                    console.log(5);</span><br><span class="line">                    resolve(6);</span><br><span class="line">                &#125;, 0)</span><br><span class="line">                resolve(1);</span><br><span class="line">            &#125;);</span><br><span class="line">            resolve(2);</span><br><span class="line">            p.then((arg) &#x3D;&gt; &#123;</span><br><span class="line">                console.log(arg);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;));</span><br><span class="line">        first().then((arg) &#x3D;&gt; &#123;</span><br><span class="line">            console.log(arg);</span><br><span class="line">        &#125;);</span><br><span class="line">        console.log(4);</span><br><span class="line">&#x2F;&#x2F; 结果：3 7 4 1 2 5</span><br><span class="line">&#x2F;&#x2F;Promise只能resolve一次，因此resolve(6)无效</span><br></pre></td></tr></table></figure>
 
-<p>服务器发送给客户端一个UTC时间(如 expires: Mon Jan 01 2018 08:00:00 GMT)，浏览器接收到了这个头，就会为这个资源标记一个过期时间，在下次的请求时候判断未过期会直接使用这个资源缓存。来源会标记为<code>from disk cache</code>。</p>
-<p>浏览器在取到这个缓存资源的时候，会用客户机的时间与之<code>对比</code>，如果还在<code>有效期</code>内，则直接使用这个缓存，不进行<code>网络请求</code>。否则会进入其他缓存依据判断。</p>
-<p>而这个机制会有一个问题，就是，缓存资源是否过期依赖客户机时间。客户机可以通过<code>修改</code>当前时间来使这个缓存资源<code>失效</code>。</p>
-<h4 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&#39;Cache-Control&#39;,&#39;public,max-age&#x3D;100&#39;)</span><br></pre></td></tr></table></figure>
+<h2 id="Promise原理"><a href="#Promise原理" class="headerlink" title="Promise原理"></a>Promise原理</h2><p>Promise有几种状态？ pending fulfilled rejected<br>Promise有哪些方法？ resolve reject<br>Promise有哪些属性？ value reason<br>Promise有一个then方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">class Promise &#123;</span><br><span class="line">    constructor(fn) &#123;</span><br><span class="line">        this.state &#x3D; &quot;pending&quot;;</span><br><span class="line">        this.value &#x3D; null;</span><br><span class="line">        this.reason &#x3D; null;</span><br><span class="line">        this.then &#x3D; function (onFulfilled, onRejected) &#123;</span><br><span class="line">            &#x2F;&#x2F;执行then方法的时候，需要查看Promise的状态</span><br><span class="line">            &#x2F;&#x2F;Promise成功，则执行成功的的回调;失败，则执行失败的回调</span><br><span class="line">            switch (this.state) &#123;</span><br><span class="line">                case &#39;fulfilled&#39;:</span><br><span class="line">                    onFulfilled(this.value);</span><br><span class="line">                    break;</span><br><span class="line">                case &#39;rejected&#39;:</span><br><span class="line">                    onRejected(this.reason);</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        let resolve &#x3D; value &#x3D;&gt; &#123;</span><br><span class="line">            if (this.state &#x3D;&#x3D;&#x3D; &#39;pending&#39;) &#123;</span><br><span class="line">                this.state &#x3D; &quot;fulfilled&quot;;</span><br><span class="line">                this.value &#x3D; value;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        let reject &#x3D; reason &#x3D;&gt; &#123;</span><br><span class="line">            if (this.state &#x3D;&#x3D;&#x3D; &#39;pending&#39;) &#123;</span><br><span class="line">                this.state &#x3D; &quot;rejected&quot;;</span><br><span class="line">                this.reason &#x3D; reason;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;执行fn函数</span><br><span class="line">        try &#123;</span><br><span class="line">            fn(resolve, reject)</span><br><span class="line">        &#125; catch (e) &#123;</span><br><span class="line">            reject(e)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p &#x3D; new Promise(function (resolve, reject) &#123;</span><br><span class="line">    console.log(&quot;22222&quot;)</span><br><span class="line">    resolve(&quot;张三&quot;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;Promise.then方法接收两个函数做为参数</span><br><span class="line">&#x2F;&#x2F;第一个函数参数是Promise成功的回调</span><br><span class="line">&#x2F;&#x2F;第二个函数参数是Promise失败的回调</span><br><span class="line">p.then((msg) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(msg,&quot;AAA&quot;)</span><br><span class="line">&#125;, (err) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(err,&quot;BBB&quot;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>HTTP/1.1定义的 Cache-Control 头用来区分对缓存机制的支持情况， 请求头和响应头都支持这个属性。通过它提供的不同的值来定义缓存策略。</p>
-<h5 id="max-age"><a href="#max-age" class="headerlink" title="max-age"></a>max-age</h5><p>示例:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: max-age&#x3D;100</span><br></pre></td></tr></table></figure>
-
-<p>这个示例表示，这个缓存资源在本次请求后的100秒之后都有效。浏览器会直接返回<code>from disk cache</code>，不进行网络资源请求。</p>
-<h5 id="no-cache-和-no-store"><a href="#no-cache-和-no-store" class="headerlink" title="no-cache 和 no-store"></a>no-cache 和 no-store</h5><p>示例:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: no-cache      Cache-Control: no-store</span><br></pre></td></tr></table></figure>
-
-<p>这两个参数都表示每一次请求，都需要发送一个网络请求。<br>他们之间的区别是<br><strong>no-cache：</strong> 并不是真的不缓存数据，他只是每次都确认资源是否过期，利用ETag令牌一定程度上减少传输流量<br><strong>no-store：</strong> 要求客户端每次都重新请求资源，不做任何缓存处理。</p>
-<h5 id="public-和-private"><a href="#public-和-private" class="headerlink" title="public 和 private"></a>public 和 private</h5><p>示例:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: public     Cache-Control: private</span><br></pre></td></tr></table></figure>
-
-<p><strong>public：</strong> 是一种默认的策略，表示当前缓存是开放的，任何请求想用的中间环节都可以对其进行缓存。<br><strong>private：</strong> 则表示当前相应是针对单个用户的，不建议对其进行缓存。</p>
-<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><h4 id="Last-Modified-If-Modified-Since"><a href="#Last-Modified-If-Modified-Since" class="headerlink" title="Last-Modified,If-Modified-Since"></a>Last-Modified,If-Modified-Since</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&#39;Last-Modified&#39;,&#39;Fri,22 Jul 2016 08:00:00 GMT&#39;)</span><br></pre></td></tr></table></figure>
-
-<p>当客户端访问资源时，服务器会将资源<strong>最后修改时间</strong>通过 <code>Last-Modified</code> 标识由服务器发往客户端，客户端记录修改时间，再次请求本地存在的缓存资源时，客户端会通过 <code>If-Modified-Since: Last-Modified-value</code> 将先前服务器端发过来的最后修改时间发送回去，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则重新响应新的页面并回传新的Last-Modified，如果是最新的，则返回<code>304</code>告诉客户端其本地缓存资源是最新的。</p>
-<p><strong>缺陷:</strong></p>
-<p>a、只要资源修改，无论内容是否发生实质性的变化，都会将该资源返回客户端。例如周期性重写，这种情况下该资源包含的数据实际上一样的。</p>
-<p>b、以时刻作为标识，无法识别一秒内进行多次修改的情况。</p>
-<p>c、某些服务器不能精确的得到文件的最后修改时间。</p>
-<h4 id="ETag"><a href="#ETag" class="headerlink" title="ETag"></a>ETag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&#39;ETag&#39;,&#39;3fd729c07839068ebb6f7f4374981d9f&#39;) &#x2F;&#x2F;一般可用MD5</span><br></pre></td></tr></table></figure>
-
-<p>服务器在响应时，回传一个唯一标志符（比如md5），服务器在把页面响应给客户端的时候，会在实体首部加上“ETag: 唯一标识符”一起返回给客户端</p>
-<p>客户端会保留ETag字段，在下次请求时，通过在请求中添加if-none-match:ETag-value 给服务器，与服务器的ETag字段进行匹配，如果匹配上，则直接回送304 和响应报头即可。反之，则重新发送资源数据并回传新的ETag字段 。</p>
-<h2 id="浏览器缓存判断流程"><a href="#浏览器缓存判断流程" class="headerlink" title="浏览器缓存判断流程"></a>浏览器缓存判断流程</h2><p><a target="_blank" rel="noopener" href="https://jasonms0.github.io/2020/02/23/%E5%89%8D%E7%AB%AFHttp%E5%8D%8F%E8%AE%AE%E7%BC%93%E5%AD%98/aaa.png"><img src="https://jasonms0.github.io/2020/02/23/%E5%89%8D%E7%AB%AFHttp%E5%8D%8F%E8%AE%AE%E7%BC%93%E5%AD%98/aaa.png" alt="aaa"></a></p>
-<p><a target="_blank" rel="noopener" href="https://jasonms0.github.io/2020/02/17/Vuex%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">Vuex使用详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://jasonms0.github.io/2019/10/13/js%E5%AE%9E%E7%8E%B0%E9%93%BE%E8%A1%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+  </a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2020/06/08/Vuex%E7%9A%84%E8%AF%A6%E8%A7%A3/" style="float: left;">
-        ← Vuex的详解
+    <a class="pull-left" href="/2020/02/02/Es6-async%E4%B8%8Eawait/" style="float: left;">
+        ← Es6--async与await
     </a>
     
     
-    <a class="pull-right" href="/2020/03/05/Vue%E4%B8%AD%E7%9A%84keepAlive%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%BA%94%E7%94%A8/">
-        Vue中的keepAlive的介绍应用 →
+    <a class="pull-right" href="/2020/01/12/ES6%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC/">
+        ES6结构赋值 →
     </a>
     
 </nav>
